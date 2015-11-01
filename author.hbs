@@ -1,0 +1,47 @@
+{{!< default}}
+
+{{#author}}
+
+<header id="header" class="header{{#if cover}} has-cover{{else}}{{#if @blog.cover}} has-cover{{/if}}{{/if}}">
+	<div class="inner">
+		<aside class="author">
+			{{#if image}}
+			<figure class="author-avatar">
+				<img src="{{image}}" alt="{{name}}" />
+			</figure>
+			{{/if}}
+			<div class="author-bio">
+				<h2 class="author-name">{{name}}</h2>
+				{{#if bio}}
+				<p class="author-about">{{{bio}}}</p>
+				{{/if}}
+				{{#if location}}
+				<span class="author-location"><i class="icon-location"></i> {{location}}</span>
+				{{/if}}
+				{{#if website}}
+				<span class="author-website"><a href="{{website}}"><i class="icon-link"></i> Website</a></span>
+				{{/if}}
+				<span class="author-stats"><i class="icon-pencil"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
+			</div>
+		</aside>
+	</div>
+	{{#if cover}}
+	<div class="header-cover" style="background-image: url('{{cover}}');"></div>
+	{{else}}
+	{{#if @blog.cover}}
+	<div class="header-cover" style="background-image: url('{{@blog.cover}}');"></div>
+	{{/if}}
+	{{/if}}
+</header>
+
+{{/author}}
+
+<div id="post-index" class="container">
+
+	<main class="content" role="main">
+	
+		{{> "loop"}}
+	
+	</main>
+
+</div>
