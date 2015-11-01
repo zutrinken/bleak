@@ -50,7 +50,7 @@ jQuery(function($) {
 			gutter					: 0,
 			columnWidth				: 1,
 			transitionDuration		: 0
-		}).imagesLoaded().progress(function() {
+		}).imagesLoaded().always(function() {
 			postlist.masonry('layout');
 		});
 	}
@@ -173,10 +173,10 @@ jQuery(function($) {
 				NProgress.done();
 				ajaxContainer.fadeIn(500);
 				$(document).scrollTop(0);
-				reload();
 				setTimeout(function() {
 					html.removeClass('loading');
 				}, 50);
+				reload();
 				loading = false;
 			});
 		});
