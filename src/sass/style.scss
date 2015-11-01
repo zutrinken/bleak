@@ -94,7 +94,7 @@ h4 {
 	margin: 2.4em 0 -0.8em;
 }
 
-p, ul, ol {
+p {
     margin: 2em auto;
 }
 
@@ -128,9 +128,33 @@ ol > li:before {
 	counter-increment: item;
 }
 
-ol ol, ul ul, ul ol, ol ul {
+ol,
+ul {
 	padding-left: 3em;
-	margin: 1em 0;
+	margin: 2em auto;
+	
+	ol,
+	ul {
+		padding-left: 1.5em;
+		margin: 1em auto;	
+	}
+}
+
+dl {
+	margin: 2em auto;
+	
+	dt {
+		font-size: 0.875em;
+		line-height: 1.143em;
+		font-weight: 700;
+		margin-bottom: 0.571em;
+		color: $color-gray-15;
+	}
+
+	dd {
+		margin-left: 1em;
+		margin-bottom: 1.5em;
+	}
 }
 
 hr {
@@ -179,26 +203,6 @@ strong, b {
 
 small {
     font-size: 0.9em;
-}
-
-
-dl {
-    margin: 20px 0;
-}
-dl dt {
-    float: left;
-    width: 180px;
-    overflow: hidden;
-    clear: left;
-    text-align: right;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-dl dd {
-    margin-left: 200px;
-    margin-bottom: 12px;
 }
 
 mark {
