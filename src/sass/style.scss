@@ -332,8 +332,16 @@ img {
 	margin: 2.5em auto;
 }
 
+iframe {
+	margin: 2.5em auto;
+}
+
 .fluid-width-video-wrapper {
 	margin: 2.5em auto;
+	
+	iframe {
+		margin: auto;
+	}
 }
 
 
