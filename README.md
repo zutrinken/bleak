@@ -9,6 +9,11 @@ An AJAX driven magazine styled theme for [Ghost](http://github.com/tryghost/ghos
 * [Tag Archive](http://bleak.zutrinken.com/tag/general)
 * [Author Archive](http://bleak.zutrinken.com/author/zutrinken)
 
+## Hint
+
+* Make sure you havn’t the jQuery `<script>` injected in your footer due to [Ghosts migration method](http://dev.ghost.org/no-more-jquery/).
+* This theme works with AJAX, so it won’t work with multiple domains! Use redirects to only one domain instead.
+
 ## Setup
 
 To enable [Disqus](https://disqus.com/) comments go to your blogs code injection settings and add `<script>var disqus = ‚YOUR_DISQUS_SHORTNAME‘;</script>` to your blog header.
