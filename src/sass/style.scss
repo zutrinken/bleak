@@ -175,13 +175,13 @@ hr {
 
 blockquote {
 	margin: 2em auto;
-	padding: 0.5em 1em;
+	padding: 0 1em;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	border-left: 0.25em solid $color-gray-65;
+	border-left: 0.25em solid $color-gray-85;
 	font-style: italic;
 	font-weight: 400;
-	color: $color-gray-50;
+	color: $color-gray-40;
 	background: transparent;
 
 	* {
