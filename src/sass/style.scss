@@ -21,6 +21,13 @@ $color-gray-40: #595B66;
 $color-gray-25: #363740;
 $color-gray-15: #1F2026;
 
+/*
+	Change the accent colors here. Make sure they work on light an dark backgrounds!
+*/
+
+$color-primary-default:		$color-green-85; /* Light */
+$color-primary-active:		$color-green-72; /* Dark */
+
 
 /* ==========================================================================
    Basics
@@ -52,11 +59,11 @@ a {
 	}
 }
 .post-content a {
-	border-bottom: 2px solid $color-green-85;
+	border-bottom: 2px solid $color-primary-default;
 	
 	&:hover,
 	&:focus {
-		border-color: $color-green-72;
+		border-color: $color-primary-active;
 	}
 }
 
@@ -352,7 +359,7 @@ iframe {
 #nprogress {
 
 	.bar {
-		background: $color-green-72 !important;
+		background: $color-primary-active !important;
 		height: 3px !important;
 		
 		.peg {
@@ -369,8 +376,8 @@ iframe {
 			width: 4em !important;
 			height: 4em !important;
 			margin: -4em -4em 0 0 !important;
-			border-top-color: $color-green-72 !important;
-			border-left-color: $color-green-72 !important;
+			border-top-color: $color-primary-active !important;
+			border-left-color: $color-primary-active !important;
 		}
 	}
 }
@@ -568,7 +575,7 @@ body {
 			width: 110%;
 			height: 2em;
 			background: #fff;
-			border-bottom: 4px solid $color-green-85;
+			border-bottom: 4px solid $color-primary-default;
 			box-shadow: 0 0.125em 0.125em rgba(0,0,0,0.1);
 			transform: rotate(2.5deg);
 			transition: all ease-out 0.2s;
@@ -644,7 +651,6 @@ body {
 		
 		.menu-list-item {
 			position: relative;
-			font-weight: 400;
 			
 			&:after {
 				content: '';
@@ -655,23 +661,6 @@ body {
 				border-top: 1px solid $color-gray-90;
 			}
 			
-			&.current {
-				font-weight: 700;
-
-				&:before {
-					content: '';
-					position: absolute;
-					left: 0;
-					top: 0;
-					height: 100%;
-					border-left: 4px solid $color-green-85;
-				}
-				
-				a {
-					color: $color-gray-25;
-				}
-			}
-			
 			&:first-child {
 				
 				&:after {
@@ -680,13 +669,29 @@ body {
 			}
 			
 			a {
+				position: relative;
 				display: block;
 				padding: 1em 1.5em;
 				font-weight: inherit;
+				font-weight: 400;
 				
 				&:hover,
 				&:focus {
 					background: $color-gray-90;
+				}
+				
+				&.current {
+					font-weight: 700;
+					color: $color-gray-25;
+	
+					&:before {
+						content: '';
+						position: absolute;
+						left: 0;
+						top: 0;
+						height: 100%;
+						border-left: 4px solid $color-primary-default;
+					}
 				}
 			}
 		}
@@ -775,9 +780,9 @@ body {
 			font-style: normal;
 			font-weight: 400;
 			font-size: 0.5em;
-			background: $color-green-85;
+			background: $color-primary-default;
 			color: #fff;
-			text-shadow: 0 0 2px $color-green-72;
+			text-shadow: 0 0 2px $color-primary-active;
 			border-radius: 2em;
 		}
 	}
@@ -846,7 +851,7 @@ body {
 		    width: 100%;
 		    left: 0;
 		    bottom: 0;
-			border-bottom: 4px solid $color-green-85;
+			border-bottom: 4px solid $color-primary-default;
 	    }
 	}
 }
@@ -962,7 +967,7 @@ body {
 			bottom: -0.334em;
 			width: 1em;
 			margin-bottom: -2px;
-			border-bottom: 4px solid $color-green-85;
+			border-bottom: 4px solid $color-primary-default;
 		}
 		
 		a {
@@ -1112,7 +1117,7 @@ body {
 			position: relative;
 			margin: -2em -2em 2em;
 			overflow: hidden;
-			background: $color-green-85;
+			background: $color-primary-default;
 			
 			@media only screen and (max-width: $breakpoint-tablet) {
 				margin: -1em -1em 1em;
@@ -1133,7 +1138,7 @@ body {
 				width: 110%;
 				height: 4em;
 				background: #fff;
-				border-top: 4px solid $color-green-85;
+				border-top: 4px solid $color-primary-default;
 				box-shadow: 0 0 2em rgba(0,0,0,0.2);
 				transform: rotate(5deg);
 				transition: all ease-out 0.2s;
@@ -1186,7 +1191,7 @@ body {
 				}
 				
 				i {
-					color: $color-green-72;
+					color: $color-primary-active;
 				}
 			}
 		}
@@ -1220,13 +1225,13 @@ body {
 			padding: 0.286em 0.714em;
 			border-radius: 2px;
 			color: #fff;
-			text-shadow: 0 0 2px $color-green-72;
-			background: $color-green-85;
+			text-shadow: 0 0 2px $color-primary-active;
+			background: $color-primary-default;
 			font-weight: 300;
 			
 			&:hover,
 			&:focus {
-				background: $color-green-72;
+				background: $color-primary-active;
 			}
 		}
 	}
@@ -1376,7 +1381,7 @@ body {
 		}
 		
 		i {
-			color: $color-green-72;
+			color: $color-primary-active;
 		}
 		
 		@media only screen and (max-width: $breakpoint-phone) {

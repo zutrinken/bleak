@@ -2,6 +2,10 @@ jQuery(function($) {
 
 	var html = $('html');
 	var body = $('body');
+	
+	/* ==========================================================================
+	   Menu Function
+	   ========================================================================== */
 
 	body.on('click', '[data-action="menu"]', function() {
 		var action = $(this).data('action');
@@ -37,7 +41,25 @@ jQuery(function($) {
 		}
 	});
 	
-	var body = $('body');
+	/* ==========================================================================
+	   Current Menu Item
+	   ========================================================================== */
+	   
+	/*
+		Actually this should be handled by GHost itself, but the {{current}} handler doesn't 
+		work as aspected everytime so I add this little FUnction to fix this on the client side.
+	*/
+	
+	function currentMenuFix() {
+		$('.menu-list-item a').each(function() {
+			var link = $(this);
+			link.removeClass('current');
+			if(link.attr('href') == window.location.href) {
+				link.addClass('current');
+			}
+		});
+	}
+	currentMenuFix();
 	
 	/* ==========================================================================
 	   Masonry
@@ -84,36 +106,6 @@ jQuery(function($) {
 	video();
 		
 	/* ==========================================================================
-	   Add class for ajax loading
-	   ========================================================================== */
-
-	function ajaxLinkClass() {
-		
-		$('a[href^="' + window.location.origin + '"], .post-meta a, .post-tags a, #pagination a').each(function() {
-			var link = $(this);
-			
-			if(!link.hasClass('rss')) {
-				link.addClass('js-ajax-link');
-				
-				if (link.attr('href').indexOf('page') > -1) {
-					link.addClass('js-archive-index');
-				} else {
-					link.addClass('js-show-index');
-				}
-				
-				if (link.attr('href').indexOf('tag') > -1) {
-					link.addClass('js-tag-index');
-				}
-				
-				if (link.attr('href').indexOf('author') > -1) {
-					link.addClass('js-author-index');
-				}
-			}
-		});
-	}
-	ajaxLinkClass();
-		
-	/* ==========================================================================
 	   Initialize and load Disqus
 	   ========================================================================== */
 	
@@ -143,7 +135,38 @@ jQuery(function($) {
 		highlight();
 		video();
 		comments();
+		currentMenuFix();
 	}
+	
+	/* ==========================================================================
+	   Add class for ajax loading
+	   ========================================================================== */
+
+	function ajaxLinkClass() {
+		
+		$('a[href^="' + window.location.origin + '"], .post-image a, .post-title a, .post-more a, .post-meta a, .post-tags a, #pagination a').each(function() {
+			var link = $(this);
+			
+			if(!link.hasClass('rss')) {
+				link.addClass('js-ajax-link');
+				
+				if (link.attr('href').indexOf('page') > -1) {
+					link.addClass('js-archive-index');
+				} else {
+					link.addClass('js-show-index');
+				}
+				
+				if (link.attr('href').indexOf('tag') > -1) {
+					link.addClass('js-tag-index');
+				}
+				
+				if (link.attr('href').indexOf('author') > -1) {
+					link.addClass('js-author-index');
+				}
+			}
+		});
+	}
+	ajaxLinkClass();
 
 	/* ==========================================================================
 	   Ajax Loading

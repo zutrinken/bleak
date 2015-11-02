@@ -5,8 +5,8 @@
 	</div>
 	<ul class="menu-list">
 		{{#foreach navigation}}
-		<li class="menu-list-item{{#if current}} current{{/if}}">
-			<a class="{{slug}}" href="{{url absolute="true"}}">{{label}}</a>
+		<li class="menu-list-item">
+			<a class="{{slug}}{{#if current}} current{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
 		</li>
 		{{/foreach}}
 	</ul>
