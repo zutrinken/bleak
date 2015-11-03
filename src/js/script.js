@@ -221,7 +221,7 @@ jQuery(function($) {
 	    }
 	});
 	
-	$('body').on('click', '.js-show-post', function() {
+	$('body').on('click', '#post-index .post .js-show-index', function() {
 		var post = $(this).parents('.post');
 		post.addClass('initial');
 		setTimeout(function() {
