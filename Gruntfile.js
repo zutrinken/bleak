@@ -12,15 +12,13 @@ module.exports = function(grunt) {
             'jsSrcDir': 'src/js',
             'jsTargetDir': 'js',
 			'jsDependencies': [
-				'bower_components/fitvids/jquery.fitvids.js',
-				'bower_components/highlightjs/highlight.pack.min.js',
-				'bower_components/nprogress/nprogress.js'
-			],
-			'jsDependenciesInitial': [
 				'bower_components/jquery/dist/jquery.min.js',
 				'bower_components/history.js/scripts/bundled/html4+html5/jquery.history.js',
 				'bower_components/imagesloaded/imagesloaded.pkgd.min.js',
-				'bower_components/masonry/dist/masonry.pkgd.min.js'
+				'bower_components/masonry/dist/masonry.pkgd.min.js',
+				'bower_components/fitvids/jquery.fitvids.js',
+				'bower_components/highlightjs/highlight.pack.min.js',
+				'bower_components/nprogress/nprogress.js'
 			],
 			'cssDependencies': [
 				'bower_components/normalize.css/normalize.css',
@@ -113,9 +111,6 @@ module.exports = function(grunt) {
 					],
 					'assets/<%= config.jsTargetDir %>/dependencies.js': [
 						'<%= config.jsDependencies %>'
-					],
-					'assets/<%= config.jsTargetDir %>/dependencies.initial.js': [
-						'<%= config.jsDependenciesInitial %>'
 					]
 				}
 			},
@@ -133,9 +128,6 @@ module.exports = function(grunt) {
 					],
 					'assets/<%= config.jsTargetDir %>/dependencies.js': [
 						'<%= config.jsDependencies %>'
-					],
-					'assets/<%= config.jsTargetDir %>/dependencies.initial.js': [
-						'<%= config.jsDependenciesInitial %>'
 					]
 				}
 			}

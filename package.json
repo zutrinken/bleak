@@ -1,6 +1,13 @@
 {
   "name": "Bleak",
   "version": "1.0.0",
+  "description": "Ghost Theme",
+  "author": "Peter Amende",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zutrinken/bleak.git"
+  },
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
     "grunt": "^0.4.5",
