@@ -152,7 +152,9 @@ jQuery(function($) {
 				
 				if (link.attr('href').indexOf('page') > -1) {
 					link.addClass('js-archive-index');
-				} else {
+				}
+				
+				if (link.attr('href') == window.location.origin) {
 					link.addClass('js-show-index');
 				}
 				
@@ -221,7 +223,7 @@ jQuery(function($) {
 	    }
 	});
 	
-	$('body').on('click', '#post-index .post .js-show-index', function() {
+	$('body').on('click', '#post-index .post .js-ajax-link', function() {
 		var post = $(this).parents('.post');
 		post.addClass('initial');
 		setTimeout(function() {
