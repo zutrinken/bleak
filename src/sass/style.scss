@@ -482,14 +482,14 @@ body {
 }
 
 .push-next {
-		
+
 	#push {
 		animation: pushNext ease-in 0.5s forwards !important;
 	}
 }
 
 .pushed-next {
-	
+
 	#push {
 		animation: pushedNext ease-out 0.5s forwards;
 	}
@@ -1424,7 +1424,7 @@ body {
 
 .post-nav {
 	position: relative;
-	
+
 	@media only screen and (max-width: $breakpoint-desktop) {
 		height: 7em;
 	}
