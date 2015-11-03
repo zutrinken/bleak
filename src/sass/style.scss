@@ -14,6 +14,7 @@ $color-green-72: #2DB77E;
 
 $color-yellow-100:	#FFC336;
 
+$color-gray-97: #F2F3F5;
 $color-gray-90: #E1E2E6;
 $color-gray-85: #D4D5D9;
 $color-gray-65: #9D9FA6;
@@ -303,7 +304,7 @@ kbd {
 	text-shadow: #fff 0 1px 0;
 	font-size: 0.9em;
 	font-weight: bold;
-	background: #f4f4f4;
+	background: $color-gray-97;
 	border-radius: 4px;
 	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;
 }
@@ -418,7 +419,7 @@ body {
 	width: 100%;
 	min-height: 100vh;
 	padding-bottom: 6em;
-	background: #f4f4f4;
+	background: $color-gray-97;
 }
 
 
@@ -1541,7 +1542,7 @@ body {
 				border: 1px solid $color-primary-default;
 				box-shadow: 0 0 0 0 transparent;
 				transition: all ease-out 0.1s;
-				background: #f4f4f4;
+				background: $color-gray-97;
 
 				i {
 					position: relative;
@@ -1589,10 +1590,9 @@ body {
    Pagination
    ========================================================================== */
 
-
 .pagination {
 	min-height: 2.5em;
-	margin: 4em auto;
+	margin: 4em auto 2em;
 	padding: 0;
 	position: relative;
 
@@ -1613,7 +1613,7 @@ body {
 		&:hover,
 		&:focus {
 			color: $color-gray-15;
-			background: rgba(0,0,0,0.05);
+			background: $color-gray-90;
 		}
 
 		i {
@@ -1621,7 +1621,7 @@ body {
 		}
 
 		@media only screen and (max-width: $breakpoint-phone) {
-			background: rgba(0,0,0,0.05);
+			background: $color-gray-90;
 			padding: 0 0.75em !important;
 
 			i {
