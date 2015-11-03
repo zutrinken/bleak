@@ -16,8 +16,9 @@ _**Hint:** This theme works with AJAX, so it won’t work with multiple domains 
 ## Features
 
 * Responsive layout
-* Navigation support
-* Cover image support for blog, tags and author archives
+* Blog Navigation
+* Post navigation
+* Cover images for blog, tags and author archives
 * Featured posts
 * Automatic code syntax highlight and line numbers
 * Disqus support

@@ -5,8 +5,9 @@
 @import "fonts";
 @import "icons";
 
-$breakpoint-phone:	30em;
-$breakpoint-tablet:	50em;
+$breakpoint-phone:		30em;
+$breakpoint-tablet:		50em;
+$breakpoint-desktop:	70em;
 
 $color-green-85: #36D995;
 $color-green-72: #2DB77E;
@@ -1263,9 +1264,8 @@ body {
 	}
 }
 
-
 /* ==========================================================================
-   Single
+   Post Footer
    ========================================================================== */
 
 .post-footer {
@@ -1346,6 +1346,172 @@ body {
 	border-radius: 2px;
 }
 
+/* ==========================================================================
+   Post Nav
+   ========================================================================== */
+
+.post-nav {
+	position: relative;
+	
+	@media only screen and (max-width: $breakpoint-desktop) {
+		height: 7em;
+	}
+
+	&:after {
+		clear: both;
+		content: '';
+		display: table;
+	}
+
+	.post-nav-item {
+		position: fixed;
+		top: 50%;
+		display: block;
+		margin-top: -4em;
+		overflow: hidden;
+		border-radius: 10em;
+		transition: none;
+
+		@media only screen and (max-width: $breakpoint-desktop) {
+			position: absolute;
+			top: auto;
+			margin: auto;
+			max-width: 50%;
+		}
+
+		&:hover,
+		&:focus {
+			border-radius: 0;
+
+			.post-nav-teaser {
+
+				.post-nav-icon {
+					box-shadow: 0 0 0 25em $color-primary-default;
+
+					@media only screen and (max-width: $breakpoint-tablet) {
+						box-shadow: 0 0 0 2px $color-primary-default;
+					}
+				}
+
+				.post-nav-info {
+					display: block;
+
+					@media only screen and (max-width: $breakpoint-tablet) {
+						display: none;
+					}
+
+					.post-nav-title {
+						color: $color-gray-15;
+					}
+
+					.post-nav-excerpt {
+						color: #fff;
+					}
+				}
+			}
+		}
+
+		&.post-nav-next {
+			left: 0;
+			text-align: left;
+
+			.post-nav-icon {
+				float: left;
+
+				i {
+					left: -0.05em;
+				}
+			}
+
+			.post-nav-info {
+				padding-left: 6em;
+			}
+		}
+
+		&.post-nav-prev {
+			right: 0;
+			text-align: right;
+
+			.post-nav-icon {
+				float: right;
+
+				i {
+					right: -0.05em;
+				}
+			}
+
+			.post-nav-info {
+				padding-right: 6em;
+			}
+		}
+
+		.post-nav-teaser {
+			display: block;
+			padding: 1em;
+			transition: all ease-out 0.2s;
+			max-width: 25em;
+			overflow: visible;
+
+			&:after {
+				clear: both;
+				content: '';
+				display: table;
+			}
+
+			.post-nav-icon {
+				display: block;
+				width: 5em;
+				height: 5em;
+				line-height: 5em;
+				text-align: center;
+				box-sizing: border-box;
+				border-radius: 10em;
+				border: 1px solid $color-primary-default;
+				box-shadow: 0 0 0 0 transparent;
+				transition: all ease-out 0.1s;
+				background: #f4f4f4;
+
+				i {
+					position: relative;
+					font-size: 2em;
+				}
+			}
+
+			.post-nav-info {
+				display: none;
+				width: 100%;
+				box-sizing: border-box;
+				transition: all ease-out 0.2s;
+
+				.post-nav-title {
+					display: block;
+					max-height: 1em;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					margin: 1.25em 0 0.25em;
+					font-size: 1em;
+					line-height: 1em;
+					font-weight: 700;
+					color: $color-gray-25;
+				}
+
+				.post-nav-excerpt {
+					display: block;
+					max-height: 1.334em;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					margin: 0;
+					font-size: 0.75em;
+					line-height: 1.334em;
+					font-weight: 400;
+					color: $color-gray-65;
+				}
+			}
+		}
+	}
+}
 
 /* ==========================================================================
    Pagination

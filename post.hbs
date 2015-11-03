@@ -38,6 +38,32 @@
 			<aside class="post-comments">
 				<div id="disqus_thread"></div>
 			</aside>
+			
+			<nav class="post-nav">
+				{{#next_post}}
+					<a class="post-nav-item post-nav-next" href="{{url absolute="true"}}">
+						<section class="post-nav-teaser">
+							<span class="post-nav-icon"><i class="icon-arrow-left"></i></span>
+							<span class="post-nav-info">
+								<h4 class="post-nav-title">{{title}}</h4>
+								<p class="post-nav-excerpt">{{excerpt words="12"}}&hellip;</p>
+							</span>
+						</section>
+					</a>
+				{{/next_post}}
+				{{#prev_post}}
+					<a class="post-nav-item post-nav-prev" href="{{url absolute="true"}}">
+						<section class="post-nav-teaser">
+							<span class="post-nav-icon"><i class="icon-arrow-right"></i></span>
+							<span class="post-nav-info">
+								<h4 class="post-nav-title">{{title}}</h4>
+								<p class="post-nav-excerpt">{{excerpt words="12"}}&hellip;</p>
+							</span>
+						</section>
+					</a>
+				{{/prev_post}}
+				<div class="clear"></div>
+			</nav>
 
 			{{/post}}
 		</div>
