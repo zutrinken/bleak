@@ -2,7 +2,10 @@
 
 An AJAX driven magazine styled theme for [Ghost](http://github.com/tryghost/ghost/) by [Peter Amende](http://zutrinken.com/).
 
-_**Hint:** This theme works with AJAX, so it won’t work with multiple domains properly! Use redirects to only one domain instead._
+**Hint:**  
+* _This theme works with AJAX, so it won’t work with multiple domains properly! Use redirects to only one domain instead._
+
+* _Make sure you haven’t jQuery injected in your footer due to [Ghosts migration method](http://dev.ghost.org/no-more-jquery/). This can break the layout._
 
 ## Demo
 
@@ -10,6 +13,16 @@ _**Hint:** This theme works with AJAX, so it won’t work with multiple domains 
 * [Post](http://bleak.zutrinken.com/demo)
 * [Tags](http://bleak.zutrinken.com/tag/general)
 * [Author](http://bleak.zutrinken.com/author/zutrinken)
+
+## Features
+
+* Responsive layout
+* Navigation support
+* Cover image support for blog, tags and author archives
+* Featured posts
+* Automatic code syntax highlight and line numbers
+* Disqus support
+* Sharing buttons
 
 ## Setup
 
