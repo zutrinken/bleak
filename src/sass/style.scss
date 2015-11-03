@@ -436,6 +436,77 @@ body {
 	}
 }
 
+/* ==========================================================================
+   Push Animations
+   ========================================================================== */
+
+@keyframes pushPrev {
+	0% {
+		transform: translate3d(0,0,0);
+	}
+	100% {
+		transform: translate3d(-100%,0,0);
+	}
+}
+
+@keyframes pushedPrev {
+	0% {
+		transform: translate3d(100%,0,0);
+	}
+	100% {
+		transform: translate3d(0,0,0);
+	}
+}
+
+@keyframes pushNext {
+	0% {
+		transform: translate3d(0,0,0);
+	}
+	100% {
+		transform: translate3d(100%,0,0);
+	}
+}
+
+@keyframes pushedNext {
+	0% {
+		transform: translate3d(-100%,0,0);
+	}
+	100% {
+		transform: translate3d(0,0,0);
+	}
+}
+
+#push {
+	transform: translate3d(0,0,0);
+	transform-style: preserve-3d;
+}
+
+.push-next {
+		
+	#push {
+		animation: pushNext ease-in 0.5s forwards !important;
+	}
+}
+
+.pushed-next {
+	
+	#push {
+		animation: pushedNext ease-out 0.5s forwards;
+	}
+}
+
+.push-prev {
+
+	#push {
+		animation: pushPrev ease-in 0.5s forwards !important;
+	}
+}
+
+.pushed-prev {
+	#push {
+		animation: pushedPrev ease-out 0.5s forwards;
+	}
+}
 
 
 
@@ -1059,6 +1130,7 @@ body {
 	max-width: 1200px;
 	margin: 0 auto 4em;
 	padding: 0.5em;
+	z-index: 10;
 }
 
 @keyframes fade {

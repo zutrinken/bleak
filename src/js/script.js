@@ -191,6 +191,14 @@ jQuery(function($) {
 			var title = result.match(/<title>(.*?)<\/title>/)[1];
 			
 			ajaxContainer.fadeOut(500, function() {
+				if(html.hasClass('push-next')) {
+					html.removeClass('push-next');
+					html.addClass('pushed-next');
+				}
+				if(html.hasClass('push-prev')) {
+					html.removeClass('push-prev');
+					html.addClass('pushed-prev');
+				}
 				document.title = title;
 				ajaxContainer.html(newContent);
 				body.removeClass();
@@ -208,6 +216,22 @@ jQuery(function($) {
 	});
 	$('body').on('click', '.js-ajax-link', function(e) {
 	    e.preventDefault();
+	    
+		var link = $(this);
+		
+		if(link.hasClass('post-nav-item') || link.hasClass('pagination-item')) {
+			if(link.hasClass('post-nav-next') || link.hasClass('pagination-next')) {
+				html.removeClass('pushed-prev');
+				html.addClass('push-next');
+			}
+			if(link.hasClass('post-nav-prev') || link.hasClass('pagination-prev')) {
+				html.removeClass('pushed-next');
+				html.addClass('push-prev');
+			}
+		} else {
+			html.removeClass('pushed-next');
+			html.removeClass('pushed-prev');
+		}
 
 	    if (loading === false) {
 			var currentState = History.getState();
@@ -230,5 +254,4 @@ jQuery(function($) {
 			post.addClass('active');
 		}, 1);
 	});
-
 });
