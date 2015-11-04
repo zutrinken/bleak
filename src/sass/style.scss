@@ -445,17 +445,23 @@ body {
 	0% {
 		transform: translate3d(0,0,0);
 	}
+	75% {
+		opacity: 1;
+	}
 	100% {
-		transform: translate3d(-100%,0,0);
+		transform: translate3d(-150%,0,0);
+		opacity: 0;
 	}
 }
 
 @keyframes pushedPrev {
 	0% {
 		transform: translate3d(100%,0,0);
+		opacity: 0;
 	}
 	100% {
 		transform: translate3d(0,0,0);
+		opacity: 1;
 	}
 }
 
@@ -463,23 +469,30 @@ body {
 	0% {
 		transform: translate3d(0,0,0);
 	}
+	75% {
+		opacity: 1;
+	}
 	100% {
-		transform: translate3d(100%,0,0);
+		transform: translate3d(150%,0,0);
+		opacity: 0;
 	}
 }
 
 @keyframes pushedNext {
 	0% {
 		transform: translate3d(-100%,0,0);
+		opacity: 0;
 	}
 	100% {
 		transform: translate3d(0,0,0);
+		opacity: 1;
 	}
 }
 
 #push {
 	transform: translate3d(0,0,0);
 	transform-style: preserve-3d;
+	opacity: 1;
 }
 
 .push-next {
