@@ -1,7 +1,5 @@
 {
-  "name": "Bleak",
-  "description": "Ghost Theme",
-  "dependencies": {},
+  "name": "bleak",
   "devDependencies": {
     "fitvids": "~1.1.0",
     "highlightjs": "~8.8.0",
