@@ -24,7 +24,8 @@ $color-gray-25: #363740;
 $color-gray-15: #1F2026;
 
 /*
-	Change the accent colors here. Make sure they work on light an dark backgrounds!
+	Change the accent colors here. Make sure they work on light an dark
+	backgrounds or as background color for light and dark text color
 */
 
 $color-primary-default:		$color-green-85; /* Light */
@@ -1242,7 +1243,7 @@ body {
 			}
 
 			.post-image {
-			
+
 				&:after {
 					background: $color-gray-15;
 					bottom: -2.5em;
@@ -1271,7 +1272,7 @@ body {
 				padding: 1em;
 			}
 		}
-		
+
 		.post-link {
 			position: absolute;
 			left: 0;
@@ -1315,11 +1316,11 @@ body {
 
 		&:hover,
 		&:focus {
-			
+
 			.inner {
-				box-shadow: 0 0 0 4px $color-gray-90;
+				box-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 2px 6px rgba(0,0,0,0.05), 0 8px 48px rgba(0,0,0,0.1);
 			}
-			
+
 			.post-image {
 
 				img {
@@ -1578,9 +1579,19 @@ body {
 				transition: all ease-out 0.1s;
 				background: $color-gray-97;
 
+				@media only screen and (max-width: $breakpoint-phone) {
+					width: 4em;
+					height: 4em;
+					line-height: 4em;
+				}
+
 				i {
 					position: relative;
 					font-size: 2em;
+
+					@media only screen and (max-width: $breakpoint-phone) {
+						font-size: 1.5em;
+					}
 				}
 			}
 
@@ -1625,41 +1636,45 @@ body {
    ========================================================================== */
 
 .pagination {
-	min-height: 2.5em;
+	min-height: 3em;
 	margin: 4em auto 2em;
 	padding: 0;
 	position: relative;
 
-	.pagination-prev,
-	.pagination-next {
+	.pagination-item {
 		position: relative;
 		display: block;
+		height: 3em;
+		line-height: 3em;
+		padding: 0 1em;
 		text-align: center;
 		text-decoration: none;
 		font-weight: 700;
 		color: $color-gray-25;
-		border: 0;
-		height: 2.5em;
-		line-height: 2.5em;
-		padding: 0 1em;
+		border: 1px solid $color-primary-default;
+		transition: all ease-out 0.1s;
+		border-radius: 4em;
 		z-index: 60;
 
 		&:hover,
 		&:focus {
 			color: $color-gray-15;
-			background: $color-gray-90;
+			box-shadow: 0 0 0 2px $color-primary-default;
 		}
 
 		i {
-			color: $color-primary-active;
+			position: relative;
 		}
 
 		@media only screen and (max-width: $breakpoint-phone) {
-			background: $color-gray-90;
-			padding: 0 0.75em !important;
+			width: 4em;
+			height: 4em;
+			line-height: 4em;
+			margin-top: -0.5em;
+			padding: 0 !important;
 
 			i {
-				color: $color-gray-15;
+				font-size: 1.5em;
 			}
 
 			> span {
@@ -1667,21 +1682,29 @@ body {
 			}
 		}
 	}
+
 	.pagination-prev {
 		float: right;
-		padding-right: 0.5em;
+
+		i {
+			right: -0.05em;
+		}
 	}
+
 	.pagination-next {
 		float: left;
-		padding-left: 0.5em;
+
+		i {
+			left: -0.05em;
+		}
 	}
 
 	.pagination-info {
 		display: block;
 		left: 0;
 		top: 0;
-		height: 2.5em;
-		line-height: 2.5em;
+		height: 3em;
+		line-height: 3em;
 		position: absolute;
 		text-align: center;
 		width: 100%;
