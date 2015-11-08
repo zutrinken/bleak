@@ -249,6 +249,8 @@ pre {
 
 	code,
 	tt {
+		position: static;
+		top: auto;
 		font-size: 1em;
 		line-height: 1.5em;
 		white-space: -moz-pre-wrap;
