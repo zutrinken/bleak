@@ -1284,12 +1284,12 @@ body {
 
 		.post-image {
 			position: relative;
-			margin: -2em -2em 2em;
+			margin: -2em -2em 0;
 			overflow: hidden;
 			background: $color-primary-default;
 
 			@media only screen and (max-width: $breakpoint-tablet) {
-				margin: -1em -1em 1em;
+				margin: -1em -1em 0;
 			}
 
 			img {

@@ -7,11 +7,11 @@
 <article class="{{post_class}}">
 	<div class="inner">
 		<a class="post-link" href="{{url absolute="true"}}"></a>
+		{{#if image}}
 		<figure class="post-image">
-			{{#if image}}
 			<a href="{{url absolute="true"}}"><img src="{{image}}" alt="" /></a>
-			{{/if}}
 		</figure>
+		{{/if}}
 		<span class="post-meta">
 			<span class="post-date">{{date format="DD MMM YYYY"}}</span>
 		</span>
