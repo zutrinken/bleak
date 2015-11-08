@@ -368,7 +368,7 @@ iframe {
 #nprogress {
 
 	.bar {
-		background: $color-primary-active !important;
+		background: $color-primary-default !important;
 		height: 3px !important;
 
 		.peg {
@@ -385,8 +385,8 @@ iframe {
 			width: 4em !important;
 			height: 4em !important;
 			margin: -4em -4em 0 0 !important;
-			border-top-color: $color-primary-active !important;
-			border-left-color: $color-primary-active !important;
+			border-top-color: $color-primary-default !important;
+			border-left-color: $color-primary-default !important;
 		}
 	}
 }
