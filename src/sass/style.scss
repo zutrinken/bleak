@@ -221,15 +221,18 @@ mark {
 
 code,
 tt {
-	padding: 4px 8px;
-	margin: 0 2px;
-	font-family: 'Inconsolata', monospace, sans-serif;
-	font-size: 0.75em;
+	display: inline-block;
+	position: relative;
+	top: -1px;
+	padding: 3px 6px;
+	margin: -1px 2px;
+	font-family: 'Inconsolata', monospace;
+	font-size: 0.875em;
+	line-height: 1.143em;
 	white-space: pre;
 	background: $color-gray-90;
 	color: #000;
 	font-weight: 400;
-	vertical-align: top;
 	border-radius: 2px;
 }
 
@@ -237,7 +240,7 @@ pre {
 	margin: 2em auto;
 	width: 100%;
 	padding: 1em;
-	font-family: 'Inconsolata', monospace, sans-serif;
+	font-family: 'Inconsolata', monospace;
 	white-space: pre;
 	overflow: auto;
 	background: $color-gray-65;
@@ -246,27 +249,28 @@ pre {
 
 	code,
 	tt {
-		font-size: 0.75em;
-		line-height: 2em;
+		font-size: 1em;
+		line-height: 1.5em;
 		white-space: -moz-pre-wrap;
 		white-space: pre-wrap;
 		vertical-align: inherit;
 		border: none;
 		padding: 0;
-		background: $color-gray-90;
+		background: transparent;
 	}
 }
 
 pre.codeblock {
 	position: relative;
 	padding: 1em;
+	overflow: hidden;
 
 	code {
 		display: block;
 		border: 0;
-		padding: 1.334em;
-		padding-left: 5.334em;
-		margin: -1.334em;
+		padding: 1.5em;
+		padding-left: 4em;
+		margin: -1em;
 		white-space: inherit;
 		overflow-x: scroll;
 		background: $color-gray-90;
@@ -278,7 +282,7 @@ pre.codeblock {
 		height: 100%;
 		left: 0;
 		top: 0;
-		padding: 1em 0;
+		padding: 1.5em 0;
 		border-right: 1px solid $color-gray-85;
 		font-size: 1em;
 		line-height: 1.5em;
