@@ -1,6 +1,6 @@
 # Bleak
 
-An AJAX driven magazine styled theme for [Ghost](http://github.com/tryghost/ghost/) by [Peter Amende](http://zutrinken.com/).
+An elegant AJAX driven theme for [Ghost](http://github.com/tryghost/ghost/) by [Peter Amende](http://zutrinken.com/).
 
 ***
 
@@ -16,10 +16,10 @@ _**Hint:** This theme works with AJAX, so it won’t work with multiple domains 
 ## Features
 
 * Responsive layout
-* Blog Navigation
+* Blog navigation
 * Post navigation
-* Cover images for blog, tags and author archives
-* Featured posts
+* Cover images for blog, tag and author archives
+* Featured posts style
 * Automatic code syntax highlight and line numbers
 * Disqus support
 * Sharing buttons
