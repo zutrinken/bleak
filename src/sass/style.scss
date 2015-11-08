@@ -1193,7 +1193,6 @@ body {
 
 			.inner {
 				transition: all ease-in 0.5s;
-				transform: scale(1);
 			}
 		}
 
@@ -1254,7 +1253,6 @@ body {
 					top: 0;
 					width: 0;
 					height: 0;
-					margin: 0.5em;
 					border-right: 3em solid $color-yellow-100;
 					border-bottom: 3em solid transparent;
 					z-index: 1;
@@ -1268,7 +1266,6 @@ body {
 					top: 0;
 					width: 1.75em;
 					height: 1.75em;
-					margin: 0.5em;
 					line-height: 2em;
 					text-align: center;
 					color: $color-gray-15;
@@ -1301,6 +1298,8 @@ body {
 			background: #fff;
 			box-sizing: border-box;
 			transition: all ease-out 0.2s;
+			transform: scale(1);
+			transform-style: preserve-3d;
 
 			@media only screen and (max-width: $breakpoint-tablet) {
 				padding: 1em;
