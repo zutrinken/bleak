@@ -26,7 +26,7 @@ _**Hint:** This theme works with AJAX, so it won’t work with multiple domains 
 
 ## Setup
 
-To enable [Disqus](https://disqus.com/) comments go to your blogs code injection settings and add `<script>var disqus = ‚YOUR_DISQUS_SHORTNAME‘;</script>` to your blog header.
+To enable [Disqus](https://disqus.com/) comments go to your blogs code injection settings and add `<script>var disqus="YOUR_DISQUS_SHORTNAME";</script>` to your blog header.
 
 ## Development
 
