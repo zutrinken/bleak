@@ -199,7 +199,7 @@ jQuery(function($) {
 					html.removeClass('push-prev');
 					html.addClass('pushed-prev');
 				}
-				document.title = title;
+				document.title = $('<textarea/>').html(title).text();
 				ajaxContainer.html(newContent);
 				body.removeClass();
 				body.addClass($('#body-class').attr('class'));
