@@ -597,6 +597,10 @@ body {
 			&:focus {
 				background: $color-gray-90;
 			}
+			
+			i:before {
+				margin: auto;
+			}
 		}
 
 		.rss {}
@@ -1463,6 +1467,10 @@ body {
 			&:focus {
 
 			}
+			
+			&:before {
+				margin: auto;
+			}
 
 			span {
 				display: none;
@@ -1623,6 +1631,10 @@ body {
 
 					@media only screen and (max-width: $breakpoint-phone) {
 						font-size: 1.5em;
+					}
+					
+					&:before {
+						margin: auto;
 					}
 				}
 			}
