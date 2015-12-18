@@ -328,16 +328,16 @@ table {
 table th,
 table td {
 	position: relative;
-	padding: 0.5em;
-	line-height: 0.95em;
+	padding: 1em;
+	line-height: 1em;
 	text-align: left;
 	border: 1px solid $color-gray-90;
 }
 table th {
 	font-weight: 700;
 	font-size: 0.75em;
-	line-height: 1.25em;
-	padding: 0.666em;
+	line-height: 1.334em;
+	padding: 1.334em;
 	color: $color-gray-15;
 }
 
