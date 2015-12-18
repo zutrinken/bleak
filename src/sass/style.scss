@@ -592,11 +592,10 @@ body {
 			text-align: center;
 			float: left;
 			cursor: pointer;
-			color: $color-gray-50;
 
 			&:hover,
 			&:focus {
-				color: $color-gray-40;
+				background: $color-gray-90;
 			}
 		}
 
