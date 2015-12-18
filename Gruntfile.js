@@ -50,7 +50,6 @@ module.exports = function(grunt) {
         sass: {
             dev: {
                 options: {
-                    includePaths: ['<%= config.cssSrcDir %>'],
                     sourceMaps: true
                 },
                 files: {
@@ -59,7 +58,8 @@ module.exports = function(grunt) {
             },
             dist: {
                 options: {
-                    outputStyle: 'compressed'
+                    outputStyle: 'compressed',
+                    sourceMaps: false
                 },
                 files: {
                     'assets/<%=  config.cssTargetDir %>/style.css': '<%=  config.cssSrcDir %>/style.scss'
