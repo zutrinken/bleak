@@ -1,45 +1,25 @@
-Last login: Thu Jan  7 23:31:21 on ttys000
-Sumits-MacBook-Pro:~ SumitG$ ssh root@178.62.238.87
-root@178.62.238.87's password: 
-Welcome to Ubuntu 14.04.3 LTS (GNU/Linux 3.13.0-71-generic x86_64)
+<!DOCTYPE html>
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
- * Documentation:  https://help.ubuntu.com/
+        <title>{{meta_title}}</title>
+        <meta name="description" content="{{meta_description}}" />
 
-  System information as of Fri Jan  8 00:27:08 EST 2016
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  System load:  0.0                Processes:           78
-  Usage of /:   10.9% of 19.56GB   Users logged in:     0
-  Memory usage: 47%                IP address for eth0: 178.62.238.87
-  Swap usage:   0%
+        <link rel="stylesheet" type="text/css" href="{{asset "css/dependencies.css"}}" />
+        <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
 
-  Graph this data and manage this system at:
-    https://landscape.canonical.com/
+        {{ghost_head}}
+</head>
 
-9 packages can be updated.
-9 updates are security updates.
-
-Last login: Fri Jan  8 00:27:08 2016 from 58.68.11.195
-root@cybergeeks:~# cd /var/www/ghost/content/themes/bleak-master
-root@cybergeeks:/var/www/ghost/content/themes/bleak-master# vim default.hbs
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<body class="{{body_class}}">
+        <section id="wrapper">
+                <div id="ajax-container">
+                        <nav id="nav" class="nav">
                                 <div class="nav-logo">
                                         <a href="{{@blog.url}}">
                                                 {{#if @blog.logo}}
@@ -48,6 +28,23 @@ root@cybergeeks:/var/www/ghost/content/themes/bleak-master# vim default.hbs
                                                 <span class="name">{{@blog.title}}</span>
                                                 {{/if}}
 
+                                        </a>
+                                </div>
+                                <div class="nav-menu">
+                                        <a class="rss" href="http://feeds.feedburner.com/cybergeeks/lUpu" target="_blank"><i class="icon-rss"></i></a>
+                                        <a class="envelope" href="https://goo.gl/ydfbjl" target="_blank"><i class="icon-envelope"></i></a>
+                                        {{#if @blog.navigation}}
+                                        <a class="menu" data-action="menu" data-target="menu"><i class="icon-menu"></i></a>
+                                        {{/if}}
+                                </div>
+                        </nav>
+                                <div class="nav-logo">
+                                        <a href="{{@blog.url}}">
+                                                {{#if @blog.logo}}
+                                                <img src="{{@blog.logo}}" alt="Logo" />
+                                                {{else}}
+                                                <span class="name">{{@blog.title}}</span>
+                                                {{/if}}
                                         </a>
                                 </div>
                                 <div class="nav-menu">
