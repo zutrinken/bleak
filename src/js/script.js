@@ -135,8 +135,6 @@ jQuery(function($) {
 			return;
 		}
 
-		console.log('executing');
-
 		var post = body.find('article');
 		var postReadingTime = post.find('.reading-time');
 
