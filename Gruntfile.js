@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 				'bower_components/fitvids/jquery.fitvids.js',
 				'bower_components/highlightjs/highlight.pack.min.js',
 				'bower_components/nprogress/nprogress.js',
-                'bower_components/reading-time/build/readingTime.min.js'
+				'bower_components/reading-time/build/readingTime.min.js'
 			],
 			'cssDependencies': [
 				'bower_components/normalize.css/normalize.css',
