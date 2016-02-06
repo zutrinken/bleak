@@ -115,6 +115,16 @@ jQuery(function($) {
 				'display' : 'none'
 			});
 		} else {
+			if (window.DISQUS) {
+				return DISQUS.reset({
+					reload: true,
+					config: function () {
+						this.page.identifier = location.pathname;
+						this.page.url = location.origin + location.pathname;
+					}
+				});
+			}
+
 			$.ajax({
 				type: "GET",
 				url: "//" + disqus + ".disqus.com/embed.js",
