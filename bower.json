@@ -8,6 +8,7 @@
     "jquery": "~2.1.4",
     "masonry": "~3.3.2",
     "normalize.css": "~3.0.3",
-    "nprogress": "~0.2.0"
+    "nprogress": "~0.2.0",
+    "reading-time": "~1.0.0"
   }
 }

@@ -136,6 +136,29 @@ jQuery(function($) {
 	comments();
 
 	/* ==========================================================================
+	   Reading Time
+	   ========================================================================== */
+
+	function readingTime() {
+		// Don't execute on the front page
+		if (location.pathname === '/') {
+			return;
+		}
+
+		var post = body.find('article');
+		var postReadingTime = post.find('.post-reading-time');
+
+		post.readingTime({
+			readingTimeTarget: postReadingTime.find('.estimated-reading-time'),
+			wordCountTarget: postReadingTime.find('.word-count'),
+			error: function () {
+				postReadingTime.find('.post-reading-time').remove();
+			}
+		});
+	}
+	readingTime();
+
+	/* ==========================================================================
 	   Reload all scripts after AJAX load
 	   ========================================================================== */
 
@@ -146,6 +169,7 @@ jQuery(function($) {
 		video();
 		comments();
 		currentMenuFix();
+		readingTime();
 	}
 
 	/* ==========================================================================
