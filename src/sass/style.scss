@@ -1490,7 +1490,7 @@ body {
 }
 
 .post-comments {
-	margin: 8em 0;
+	margin: 4em 0 0;
 	border-radius: 2px;
 }
 
@@ -1503,6 +1503,7 @@ body {
 
 	@media only screen and (max-width: $breakpoint-desktop) {
 		height: 7em;
+		margin: 2em 0;
 	}
 
 	&:after {
