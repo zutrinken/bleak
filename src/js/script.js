@@ -66,6 +66,15 @@ jQuery(function($) {
 	   ========================================================================== */
 
 	function grid() {
+		$('.post-list .post .post-image img').each(function() {
+			var img = $(this);
+			img.load(function() {
+				img.parents('.post-image').css({
+					'height' : '0',
+					'padding-bottom' : 100 / img.width() * img.height() + '%'
+				});
+			});
+	    });
 		var postlist = $('.post-list').masonry({
 			itemSelector			: '.post',
 			isAnimated				: false,
@@ -73,15 +82,6 @@ jQuery(function($) {
 			columnWidth				: 1,
 			transitionDuration		: 0
 		}).imagesLoaded().always(function() {
-			$('.post-list .post .post-image img').each(function() {
-				var img = $(this);
-				img.load(function() {
-					img.parents('.post-image').css({
-						'height' : '0',
-						'padding-bottom' : 100 / img.width() * img.height() + '%'
-					});
-				});
-		    });
 			postlist.masonry('layout');
 		});
 	}
