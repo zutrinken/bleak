@@ -179,6 +179,7 @@ jQuery(function($) {
 		comments();
 		currentMenuFix();
 		readingTime();
+		mermaid.initialize();
 	}
 
 	/* ==========================================================================
