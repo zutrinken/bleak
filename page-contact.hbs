@@ -1,0 +1,110 @@
+{{!< cont}}
+
+{{#post}}
+
+<main class="content" role="main">
+	<div class="inner">
+
+	    <article class="{{post_class}}">
+			
+			<header class="post-header">
+				<h1 class="post-title">{{{title}}}</h1>
+			</header>
+		
+			<section class="post-content">
+				{{content}}
+
+
+							<!-- Begin Contact Form -->
+							<div class="inner contact">
+							    <!-- Form Area -->
+							     <div class="contact-form">
+							        <!-- Form -->
+							        <form id="contact-us" method="post">
+							            <!-- Left Inputs -->
+							            <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+							                <!-- Name -->
+							                <input type="text" name="name" id="js-name" required="required" class="form" placeholder="Name" />
+							                <!-- Email -->
+							                <input type="email" name="_replyto" id="js-email" required="required" class="form" placeholder="Email" />
+							                <!-- Subject -->
+							                <input type="text" name="subject" id="js-subject" required="required" class="form" placeholder="Subject" />
+							                <input type="hidden" name="_subject" id="fs-subject" value="New form from contacts page" />
+							                <input type="text" name="_gotcha" id="fs-honeypot" style="display:none" />
+							            </div>
+							            <!-- End Left Inputs -->
+							            <!-- Right Inputs -->
+							            <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+							                <!-- Message -->
+							                <textarea name="message" id="js-message" class="form textarea" placeholder="Message"></textarea>
+							            </div>
+							            <!-- End Right Inputs -->
+							            <!-- Bottom Submit -->
+							            <div class="relative fullwidth col-xs-12">
+							                <!-- Send Button -->
+							                <button type="submit" id="js-submitbutton" class="form-btn semibold">Send Message</button>
+							            </div>
+							            <!-- End Bottom Submit -->
+							            <!-- Clear -->
+							            <div class="clear"></div>
+							        </form>
+
+
+							    </div>
+							    <!-- End Contact Form Area -->
+							</div>
+							<!-- End Inner -->
+
+ <!--  HEY!!! :) Change your email down below  -->
+
+							<script>
+							    $(document).ready(function() {
+
+
+							        $('form').submit(function(event) {
+							            event.preventDefault();
+
+							            $.ajax({
+							                url: "https://formspree.io/YOUR-EMAIL@example.com",
+							                method: "POST",
+							                data: {
+							                    name: $('#js-name').val(),
+							                    email: $('#js-email').val(),
+							                    subject: $('#js-subject').val(),
+							                    _subject: $('#fs-subject').val(),
+							                    _gotcha: $('#fs-honeypot').val(),
+							                    message: $('#js-message').val()
+							                },
+							                dataType: "json"
+							            }).error(function(jqXHR, status, error) {
+							                swal("Oops...", "Something went wrong! Please try again later.", "error");
+							            }).success(function(data, status, jqXHR) {
+
+							                swal("Sent!", "The Message was sent succefully. Please give me sometime to get back.", "success")
+							                $('form').find('#js-email, #js-message, #js-name, #js-subject, #fs-honeypot').val('');
+
+							            });
+
+							        });
+
+							    });
+							</script>
+
+ <!--  Nah, you missed it, look above. -->
+ <!--  below that, you can configure what alert to display if some thing goes wrong, "something went wrong..", may be display your email? -->
+ <!--  Also, you can customise your success message -->
+ <!--  Just in case you're interested, we're using 'Sweet alert' for alerts and 'formspree': formspree.io for submissions -->
+ <!--  Cheers! Aravind Reddy V; github/zeroby0; AravindVoggu.in; IIIT Bangalore -->
+
+
+							<!-- End Contact Form-->
+
+				
+			</section>
+	
+	        {{/post}}
+	
+	    </article>
+    </div>
+
+</main>
