@@ -995,25 +995,29 @@ body {
 		padding: 4em 0;
 		background: no-repeat fixed center 100% / cover;
 		z-index: 1;
+		
+		@media only screen and (max-width: $breakpoint-tablet) {
+			background-attachment: scroll;
+		}
 
-		 &:before {
-			  content: '';
-			  position: absolute;
-			  width: 100%;
-			  height: 100%;
-			  left: 0;
-			  top: 0;
+		&:before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
 			background: rgba(0,0,0,0.2);
-		 }
-
-		 &:after {
-			  content: '';
-			  position: absolute;
-			  width: 100%;
-			  left: 0;
-			  bottom: 0;
+		}
+		
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			left: 0;
+			bottom: 0;
 			border-bottom: 4px solid $color-primary-default;
-		 }
+		}
 	}
 }
 
