@@ -19,12 +19,14 @@ module.exports = function(grunt) {
 				'bower_components/fitvids/jquery.fitvids.js',
 				'bower_components/highlightjs/highlight.pack.min.js',
 				'bower_components/nprogress/nprogress.js',
-				'bower_components/reading-time/build/readingTime.min.js'
+				'bower_components/reading-time/build/readingTime.min.js',
+				'bower_components/mermaid/dist/mermaid.js'
 			],
 			'cssDependencies': [
 				'bower_components/normalize.css/normalize.css',
 				'bower_components/highlightjs/styles/default.css',
-				'bower_components/nprogress/nprogress.css'
+				'bower_components/nprogress/nprogress.css',
+				'bower_components/mermaid/dist/mermaid.forest.css'
 			]
         },
         copy: {
