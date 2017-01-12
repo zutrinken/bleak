@@ -12,6 +12,7 @@ _**Hint:** This theme works with AJAX, so it won’t work with multiple domains 
 * [Post](http://bleak.zutrinken.com/demo)
 * [Tags](http://bleak.zutrinken.com/tag/general)
 * [Author](http://bleak.zutrinken.com/author/zutrinken)
+* [Contact](http://aravindvoggu.in/contact)
 
 ## Features
 
@@ -23,10 +24,15 @@ _**Hint:** This theme works with AJAX, so it won’t work with multiple domains 
 * Automatic code syntax highlight and line numbers
 * Disqus support
 * Sharing buttons
+* Ajax based contact Page
 
 ## Setup
 
 To enable [Disqus](https://disqus.com/) comments go to your blogs code injection settings and add `<script>var disqus="YOUR_DISQUS_SHORTNAME";</script>` to your blog header.
+
+To use Contact page, edit `page-contact.hbs` and change email to yours. Create a post with title "Contact" and add any 
+content you wish to have included, form content will be included after that. Now mark the post as `static page`. Make sure that the URI to this page is in for `example.com/contact`, you can configure this in the `Navigation` section.  
+Note that just for the first time you submit, you have to verify your e-mail with formspree.
 
 ## Development
 
