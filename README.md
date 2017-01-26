@@ -33,7 +33,7 @@ To enable [Disqus](https://disqus.com/) comments go to your blogs code injection
 Install [Grunt](http://gruntjs.com/getting-started/):
 
 	npm install -g grunt-cli
-	
+
 Install Grunt modules:
 
 	npm install
