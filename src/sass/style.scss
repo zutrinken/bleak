@@ -552,9 +552,11 @@ body {
 
 	.nav-logo {
 		float: left;
-		height: 2em;
+		max-width: 100%;
+		height: 4em;
 		padding: 1em;
-		max-width: 50%;
+		padding-right: 5em;
+		box-sizing: border-box;
 
 		img {
 			width: auto;
@@ -575,7 +577,9 @@ body {
 	}
 
 	.nav-menu {
-		float: right;
+		position: absolute;
+		right: 0;
+		top: 0;
 
 		&:after {
 			clear: both;
@@ -747,6 +751,7 @@ body {
 
 		.menu-list-item {
 			position: relative;
+			z-index: 5;
 
 			&:after {
 				content: '';
@@ -787,6 +792,23 @@ body {
 						top: 0;
 						height: 100%;
 						border-left: 4px solid $color-primary-default;
+					}
+				}
+			}
+			
+			&.menu-list-item-follow {
+				display: flex;
+				padding: 1em 0;
+				justify-content: space-around;
+				align-content: stretch;
+				
+				a {
+					flex: 1;
+					text-align: center;
+					
+					&:hover,
+					&:focus {
+						background: none;
 					}
 				}
 			}
