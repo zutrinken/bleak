@@ -1,23 +1,44 @@
 {
-  "name": "bleak",
-  "version": "1.0.6",
-  "description": "Ghost Theme",
-  "author": "Peter Amende",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/zutrinken/bleak.git"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "autoprefixer-core": "^5.2.1",
-    "grunt": "^0.4.5",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-contrib-cssmin": "^0.13.0",
-    "grunt-contrib-uglify": "^0.9.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-postcss": "^0.5.5",
-    "grunt-sass": "^1.0.0",
-    "load-grunt-tasks": "^3.2.0"
-  }
+	"name": "bleak",
+	"description": "Ghost Theme",
+	"demo": "http://bleak.zutrinken.com",
+	"version": "1.0.7",
+	"engines": {
+		"ghost": ">=0.9.0 <1.0.0"
+	},
+	"license": "MIT",
+	"screenshots": {
+		"desktop": "src/screenshot-desktop.jpg",
+		"mobile": "src/screenshot-mobile.jpg"
+	},
+	"author": {
+		"name": "Peter Amende",
+		"url": "http://zutrinken.com"
+	},
+	"gpm": {
+		"type": "theme",
+		"categories": [
+			"Magazine"
+		]
+	},
+	"keywords": [
+		"ghost",
+		"theme"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zutrinken/bleak.git"
+	},
+	"devDependencies": {
+		"autoprefixer-core": "^5.2.1",
+		"grunt": "^0.4.5",
+		"grunt-contrib-clean": "^0.6.0",
+		"grunt-contrib-copy": "^0.8.0",
+		"grunt-contrib-cssmin": "^0.13.0",
+		"grunt-contrib-uglify": "^0.9.1",
+		"grunt-contrib-watch": "^0.6.1",
+		"grunt-postcss": "^0.5.5",
+		"grunt-sass": "^1.0.0",
+		"load-grunt-tasks": "^3.2.0"
+	}
 }
