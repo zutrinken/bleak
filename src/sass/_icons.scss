@@ -1,10 +1,11 @@
 @font-face {
   font-family: 'icons';
-  src: url('../fonts/icons.eot?9273991');
-  src: url('../fonts/icons.eot?9273991#iefix') format('embedded-opentype'),
-       url('../fonts/icons.woff?9273991') format('woff'),
-       url('../fonts/icons.ttf?9273991') format('truetype'),
-       url('../fonts/icons.svg?9273991#icons') format('svg');
+  src: url('../fonts/icons.eot?9008467');
+  src: url('../fonts/icons.eot?9008467#iefix') format('embedded-opentype'),
+       url('../fonts/icons.woff2?9008467') format('woff2'),
+       url('../fonts/icons.woff?9008467') format('woff'),
+       url('../fonts/icons.ttf?9008467') format('truetype'),
+       url('../fonts/icons.svg?9008467#icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'icons';
-    src: url('../font/icons.svg?9273991#icons') format('svg');
+    src: url('../font/icons.svg?9008467#icons') format('svg');
   }
 }
 */
@@ -54,13 +55,13 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-star:before { content: '\e800'; } /* '' */
-.icon-location:before { content: '\e801'; } /* '' */
-.icon-arrow-left:before { content: '\e804'; } /* '' */
+.icon-arrow-left:before { content: '\e800'; } /* '' */
+.icon-arrow-right:before { content: '\e801'; } /* '' */
+.icon-menu:before { content: '\e803'; } /* '' */
+.icon-location:before { content: '\e805'; } /* '' */
 .icon-link:before { content: '\e806'; } /* '' */
-.icon-arrow-right:before { content: '\e807'; } /* '' */
-.icon-rss:before { content: '\e808'; } /* '' */
-.icon-menu:before { content: '\e809'; } /* '' */
-.icon-gplus:before { content: '\e80a'; } /* '' */
-.icon-facebook:before { content: '\e80b'; } /* '' */
-.icon-twitter:before { content: '\e80c'; } /* '' */
+.icon-rss:before { content: '\e807'; } /* '' */
+.icon-star:before { content: '\e808'; } /* '' */
+.icon-twitter:before { content: '\f099'; } /* '' */
+.icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-gplus:before { content: '\f0d5'; } /* '' */
