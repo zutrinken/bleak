@@ -13,6 +13,19 @@ _**Hint:** This theme works with AJAX, so it won’t work with multiple domains 
 * [Tags](http://bleak.zutrinken.com/tag/general)
 * [Author](http://bleak.zutrinken.com/author/zutrinken)
 
+## Screenshots
+
+<table>
+<tr>
+<td valign="top">
+<img src="https://raw.githubusercontent.com/zutrinken/bleak/master/src/screenshot-desktop.jpg" />
+</td>
+<td valign="top">
+<img src="https://raw.githubusercontent.com/zutrinken/bleak/master/src/screenshot-mobile.jpg" />
+</td>
+</tr>
+</table>
+
 ## Features
 
 * Responsive layout
