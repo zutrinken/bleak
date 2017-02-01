@@ -35,6 +35,7 @@ _**Hint:** This theme works with AJAX, so it won’t work with multiple domains 
 * Featured posts style
 * Automatic code syntax highlight and line numbers
 * Disqus support
+* Subscribers support
 * Sharing buttons
 
 ## Setup
