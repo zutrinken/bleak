@@ -1188,7 +1188,15 @@ body {
 	max-width: 1200px;
 	margin: 0 auto 4em;
 	padding: 0.5em;
+	transition: all ease-in 0.5s;
 	z-index: 10;
+}
+
+.loading {
+
+	#post-index {
+		opacity: 0;
+	}	
 }
 
 @keyframes fade {
