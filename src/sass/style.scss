@@ -780,6 +780,10 @@ body {
 				&:focus {
 					background: $color-gray-90;
 				}
+				
+				i {
+					color: inherit;
+				}
 
 				&.current {
 					font-weight: 700;
