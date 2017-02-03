@@ -10,7 +10,7 @@
 
 			<header class="post-header">
 				<span class="post-meta">
-					<span class="post-author">{{author}}</span> | <span class="post-date">{{date format="DD MMM YYYY"}} <span class="post-reading-time">| <span class="estimated-reading-time"></span> (<span class="word-count"></span> words)</span></span>
+					<span class="post-meta-author">{{author}}</span> | <span class="post-meta-date">{{date format="DD MMM YYYY"}} <span class="post-meta-reading-time">| <span class="estimated-reading-time"></span> (<span class="word-count"></span> words)</span></span>
 				</span>
 				<div class="clear"></div>
 				<h1 class="post-title">{{{title}}}</h1>
@@ -19,11 +19,13 @@
 			<section class="post-content">
 				{{content}}
 			</section>
-			
+
 			<footer class="post-footer">
+				
 				<div class="post-tags">
 					{{tags separator=" "}}
 				</div>
+				
 				<div class="post-share">
 					<a class="icon-twitter" href="https://twitter.com/share?text={{title}}&url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
 						<span>Twitter</span>
@@ -35,11 +37,39 @@
 						<span>Google+</span>
 					</a>
 				</div>
+				
 			</footer>
 			
-			<aside class="post-comments">
-				<div id="disqus_thread"></div>
+			{{#author}}
+			<aside class="post-author">
+				{{#if image}}
+					<figure class="post-author-avatar">
+						<img src="{{image}}" alt="{{name}}" />
+					</figure>
+				{{/if}}
+				<div class="post-author-bio">
+					<h4 class="post-author-name"><a href="{{url}}">{{name}}</a></h4>
+					<p class="post-author-meta">
+						{{#if location}}
+						<span class="post-author-meta-location"><i class="icon-location"></i> {{location}}</span>
+						{{/if}}
+						{{#if website}}
+						<span class="post-author-meta-website"><i class="icon-link"></i> <a href="{{website}}">Website</a></span>
+						{{/if}}
+						{{#if twitter}}
+						<span class="post-author-meta-twitter"><i class="icon-twitter"></i> <a target="_blank" href="https://twitter.com/{{twitter}}">Twitter</a></span>
+						{{/if}}
+						{{#if facebook}}
+						<span class="post-author-meta-facebook"><i class="icon-facebook"></i> <a target="_blank" href="https://facebook.com/{{facebook}}">Facebook</a></span>
+						{{/if}}
+					</p>
+					{{#if bio}}
+						<p class="post-author-about">{{{bio}}}</p>
+					{{/if}}
+				</div>
+				<div class="clear"></div>
 			</aside>
+			{{/author}}
 			
             {{#if @labs.subscribers}}
             <aside class="post-subscribe">
@@ -47,6 +77,10 @@
                 {{subscribe_form placeholder="Your email address" form_class="post-subscribe-form" input_class="post-subscribe-input" button_class="post-subscribe-button"}}
             </aside>
             {{/if}}
+			
+			<aside class="post-comments">
+				<div id="disqus_thread"></div>
+			</aside>
 			
 			</div>
 			

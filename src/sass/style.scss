@@ -71,12 +71,14 @@ a {
 }
 
 
+	
 h1, h2, h3, h4, h5, h6 {
 	text-rendering: optimizeLegibility;
 	color: $color-gray-15;
 
 	a {
 		font-weight: inherit;
+		color: inherit;
 	}
 }
 
@@ -205,10 +207,21 @@ em, i {
 	font-weight: 400;
 	font-style: italic;
 	color: $color-gray-25;
+	
+	a {
+		font-weight: inherit;
+		font-style: inherit;
+		color: inherit;
+	}
 }
 strong, b {
 	font-weight: 700;
 	color: $color-gray-25;
+	
+	a {
+		font-weight: inherit;
+		color: inherit;
+	}
 }
 
 small {
@@ -361,6 +374,7 @@ iframe {
 }
 
 
+
 /* ==========================================================================
    Default
    ========================================================================== */
@@ -416,9 +430,6 @@ body {
 	margin: 0 auto;
 	padding: 0 1em;
 }
-
-
-
 
 #wrapper {
 	position: relative;
@@ -1157,6 +1168,7 @@ body {
 		line-height: 1.375em;
 		font-weight: 800;
 		text-indent: -1px;
+		letter-spacing: -1px;
 		margin: 0.25em 0 0.75em;
 
 		&:before {
@@ -1454,6 +1466,7 @@ body {
 	}
 }
 
+
 /* ==========================================================================
    Post Footer
    ========================================================================== */
@@ -1534,7 +1547,108 @@ body {
 	}
 }
 
+/* ==========================================================================
+   Post Author
+   ========================================================================== */
+
+.post-author {
+	clear: both;
+	margin: 2.5em 0;
+	padding: 2.5em;
+	background: #fff;
+	
+	@media only screen and (max-width: $breakpoint-phone) {
+		padding: 1em;
+	}
+	
+	.post-author-avatar {
+		display: block;
+		float: left;
+		width: 6em;
+		height: 6em;
+		margin: 0;
+		border-radius: 12em;
+		overflow: hidden;
+		
+		@media only screen and (max-width: $breakpoint-phone) {
+			float: none;
+			width: 4em;
+			height: 4em;
+			margin-bottom: 1em;
+		}
+		
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			margin: 0;
+		}
+	}
+	
+	.post-author-bio {
+		padding-left: 8em;
+		
+		@media only screen and (max-width: $breakpoint-phone) {
+			padding-left: 0;
+		}
+		
+		.post-author-name {
+			margin-top: 0;
+			margin-bottom: 0;
+			font-weight: 800;
+			color: $color-gray-25;
+		}
+		
+		.post-author-about {
+			font-size: 0.75em;
+			line-height: 1.667em;
+			margin: 0;
+			padding-top: 1em;
+			border-top: 1px solid $color-gray-90;
+		}
+		
+		.post-author-meta {
+			margin-top: 0.571em;
+			margin-bottom: 0;
+			
+			span {
+				display: inline-block;
+				font-size: 0.875em;
+				line-height: 1.143em;
+				margin-right: 1.143em;
+				margin-bottom: 1.143em;
+				color: $color-gray-50;
+				
+				i {
+					color: $color-gray-65;
+				}
+			}
+		
+			.post-author-meta-location {
+				
+			}
+			
+			.post-author-meta-website {
+				
+			}
+			
+			.post-author-meta-twitter {
+				
+			}
+			
+			.post-author-meta-facebook {
+				
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Post Comments
+   ========================================================================== */
+
 .post-comments {
+	clear: both;
 	margin: 4em 0 0;
 	border-radius: 2px;
 }
@@ -1544,9 +1658,10 @@ body {
    ========================================================================== */
 
 .post-subscribe {
+	clear: both;
 	position: relative;
 	padding: 4em 1em;
-	margin-bottom: 4em;
+	margin: -1.5em 0 4em;
 	text-align: center;
 	border: 1px solid $color-gray-90;
 	box-sizing: border-box;
