@@ -1553,7 +1553,7 @@ body {
 
 .post-author {
 	clear: both;
-	margin: 2.5em 0;
+	margin: 4em 0;
 	padding: 2.5em;
 	background: #fff;
 	
@@ -1649,8 +1649,14 @@ body {
 
 .post-comments {
 	clear: both;
-	margin: 4em 0 0;
+	margin: -3em 0 4em;
 	border-radius: 2px;
+	padding: 1em;
+	border: 1px solid $color-gray-90;
+	
+	@media only screen and (max-width: $breakpoint-phone) {
+		padding: 0.5em;
+	}
 }
 
 /* ==========================================================================
@@ -1658,10 +1664,9 @@ body {
    ========================================================================== */
 
 .post-subscribe {
-	clear: both;
 	position: relative;
-	padding: 4em 1em;
-	margin: -1.5em 0 4em;
+	padding: 2.5em 1em;
+	margin: -3em 0 4em;
 	text-align: center;
 	border: 1px solid $color-gray-90;
 	box-sizing: border-box;
@@ -1675,10 +1680,15 @@ body {
 	}
 	
 	p {
+		display: inline-block;
 		font-size: 0.75em;
 		line-height: 1.334em;
 		font-weight: 400;
-		margin: 0 0 1.334em;
+		margin: 0 2.667em 2.667em;
+		background: $color-gray-97;
+		box-shadow: 0 0 0 0.75em $color-gray-97;
+		border-radius: 4px;
+		color: $color-gray-65;
 	}
 	
 	.post-subscribe-form {
