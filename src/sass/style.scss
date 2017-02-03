@@ -1670,6 +1670,10 @@ body {
 	background-size: 1em 1em;
 	box-shadow: inset 0 0 0 0.75em $color-gray-97;
 	
+	@media only screen and (max-width: $breakpoint-phone) {
+		padding: 2em 0.5em 1em;
+	}
+	
 	p {
 		font-size: 0.75em;
 		line-height: 1.334em;
@@ -1678,33 +1682,48 @@ body {
 	}
 	
 	.post-subscribe-form {
-		display: flex;
-		justify-content: center;
+		position: relative;
+		display: block;
+		margin: 0 2em;
+		box-sizing: border-box;
+		
+		@media only screen and (max-width: $breakpoint-phone) {
+			margin: 1em;
+		}
 
 		.post-subscribe-input {
 			width: 100%;
-			height: 3em;
+			height: 3.5em;
 			padding: 0.25em 1em;
-			border: 1px solid $color-gray-85;
-			background: $color-gray-97;
-			border-right: none;
+			border: 1px solid $color-gray-90;
+			background: #fff;
 			appearance: none;
 			outline: none;
 			box-shadow: none;
 			box-sizing: border-box;
-			border-radius: 2px 0 0 2px;
+			border-radius: 4px;
 			transition: all ease-out 0.2s;
+			box-shadow: 0 0 0 0.5em $color-gray-97;
+			
+			@media only screen and (max-width: $breakpoint-phone) {
+				height: 3em;
+				border-radius: 2px;
+			}
 			
 			&:hover {
-				border-color: $color-primary-default;
+				border-color: $color-gray-85;
 			}
 			
 			&:focus {
-				border-color: $color-primary-active;
+				border-color: $color-primary-default;
 			}
 		}
 
 		.post-subscribe-button {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 0.25em;
 			display: inline-block;
 			height: 3em;
 			padding: 0 1em;
@@ -1717,8 +1736,15 @@ body {
 			outline: none;
 			box-shadow: none;
 			box-sizing: border-box;
-			border-radius: 0 2px 2px 0;
+			border-radius: 2px;
 			transition: all ease-out 0.2s;
+			
+			@media only screen and (max-width: $breakpoint-phone) {
+				position: relative;
+				width: 100%;
+				margin: 0.5em 0 0;
+			}
+
 			
 			&:hover,
 			&:focus {
