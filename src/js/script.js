@@ -155,7 +155,7 @@ jQuery(function($) {
 		}
 
 		var post = body.find('article');
-		var postReadingTime = post.find('.post-reading-time');
+		var postReadingTime = post.find('.post-meta-reading-time');
 
 		post.readingTime({
 			readingTimeTarget: postReadingTime.find('.estimated-reading-time'),
