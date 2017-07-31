@@ -1,6 +1,6 @@
 {{!< default}}
 
-<header id="header" class="header{{#if tag.image}} has-cover{{else}}{{#if @blog.cover}} has-cover{{/if}}{{/if}}">
+<header id="header" class="header{{#if tag.feature_image}} has-cover{{else}}{{#if @blog.cover_image}} has-cover{{/if}}{{/if}}">
 	<div class="inner">
 		<span class="header-title">
 			<h1 class="header-name">{{tag.name}} <em>{{pagination.total}}</em></h1>
@@ -9,11 +9,11 @@
 			{{/if}}
 		</span>
 	</div>
-	{{#if tag.image}}
-	<div class="header-cover" style="background-image: url('{{tag.image}}');"></div>
+	{{#if tag.feature_image}}
+	<div class="header-cover" style="background-image: url('{{img_url tag.feature_image}}');"></div>
 	{{else}}
-	{{#if @blog.cover}}
-	<div class="header-cover" style="background-image: url('{{@blog.cover}}');"></div>
+	{{#if @blog.cover_image}}
+	<div class="header-cover" style="background-image: url('{{img_url @blog.cover_image}}');"></div>
 	{{/if}}
 	{{/if}}
 </header>

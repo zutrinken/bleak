@@ -2,12 +2,12 @@
 
 {{#author}}
 
-<header id="header" class="header{{#if cover}} has-cover{{else}}{{#if @blog.cover}} has-cover{{/if}}{{/if}}">
+<header id="header" class="header{{#if cover_image}} has-cover{{else}}{{#if @blog.cover_image}} has-cover{{/if}}{{/if}}">
 	<div class="inner">
 		<span class="header-title">
-			{{#if image}}
+			{{#if feature_image}}
 			<figure class="header-image">
-				<img src="{{image}}" alt="{{name}}" />
+				<img src="{{img_url feature_image}}" alt="{{name}}" />
 			</figure>
 			{{/if}}
 			<h1 class="header-name">{{name}} <em>{{ ../pagination.total}}</em></h1>
@@ -30,11 +30,11 @@
 			</span>
 		</span>
 	</div>
-	{{#if cover}}
-	<div class="header-cover" style="background-image: url('{{cover}}');"></div>
+	{{#if cover_image}}
+	<div class="header-cover" style="background-image: url('{{img_url cover_image}}');"></div>
 	{{else}}
-	{{#if @blog.cover}}
-	<div class="header-cover" style="background-image: url('{{@blog.cover}}');"></div>
+	{{#if @blog.cover_image}}
+	<div class="header-cover" style="background-image: url('{{img_url @blog.cover_image}}');"></div>
 	{{/if}}
 	{{/if}}
 </header>
