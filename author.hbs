@@ -5,9 +5,9 @@
 <header id="header" class="header{{#if cover_image}} has-cover{{else}}{{#if @blog.cover_image}} has-cover{{/if}}{{/if}}">
 	<div class="inner">
 		<span class="header-title">
-			{{#if feature_image}}
+			{{#if profile_image}}
 			<figure class="header-image">
-				<img src="{{img_url feature_image}}" alt="{{name}}" />
+				<img src="{{profile_image}}" alt="{{name}}" />
 			</figure>
 			{{/if}}
 			<h1 class="header-name">{{name}} <em>{{ ../pagination.total}}</em></h1>
