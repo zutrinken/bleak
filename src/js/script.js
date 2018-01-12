@@ -119,11 +119,11 @@ jQuery(function($) {
 	   ========================================================================== */
 
 	function comments() {
-		if (typeof disqus === 'undefined' || !document.getElementById('disqus_thread')) {
+		if ((typeof gitalkConf === 'undefined' && typeof disqus === 'undefined') || !document.getElementById('disqus_thread')) {
 			$('.post-comments').css({
 				'display' : 'none'
 			});
-		} else {
+		} else if (typeof disqus !== 'undefined') {
 			if (window.DISQUS) {
 				return DISQUS.reset({
 					reload: true,
@@ -140,6 +140,11 @@ jQuery(function($) {
 				dataType: "script",
 				cache: true
 			});
+		} else if (typeof gitalkConf === 'object') {
+			if (window.Gitalk) {
+				var gitalk = new Gitalk(gitalkConf);
+				gitalk.render('disqus_thread');
+			}
 		}
 	}
 	comments();
