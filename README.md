@@ -34,13 +34,29 @@ _**Hint:** This theme works with AJAX, so it won’t work with multiple domains 
 * Cover images for blog, tag and author archives
 * Featured posts style
 * Automatic code syntax highlight and line numbers
-* Disqus support
+* Disqus/Gitalk support
 * Subscribers support
 * Sharing buttons
 
 ## Setup
 
-To enable [Disqus](https://disqus.com/) comments go to your blogs code injection settings and add `<script>var disqus="YOUR_DISQUS_SHORTNAME";</script>` to your blog header.
+To enable [Disqus](https://disqus.com/) comments go to your blogs code injection settings and add `<script>var disqus="YOUR_DISQUS_SHORTNAME";</script>` to your blog header. You can also try [Gitalk](https://github.com/gitalk/gitalk), a comment system based on Github Issue. Just need insert its dependencies and config to the blogs code injection.
+
+```
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+var gitalkConf = {
+  clientID: 'YOUR_GITHUB_APP_CLIENTID',
+  clientSecret: 'YOUR_GITHUB_APP_CLIENTSECRET',
+  repo: 'YOUR_GITHUB_REPO',
+  owner: 'YOUR_GITHUB_ACCOUNT',
+  admin: ['YOUR_GITHUB_ACCOUNT'],
+  // facebook-like distraction free mode
+  distractionFreeMode: false
+};
+</script>
+```
 
 ## Development
 
