@@ -5,11 +5,11 @@
 <header id="header" class="header{{#if cover_image}} has-cover{{else}}{{#if @blog.cover_image}} has-cover{{/if}}{{/if}}">
 	<div class="inner">
 		<span class="header-title">
-			{{#if profile_image}}
-			<figure class="header-image">
-				<img src="{{profile_image}}" alt="{{name}}" />
+			<figure class="header-image avatar">
+				{{#if profile_image}}
+					<img src="{{profile_image}}" alt="{{name}}" />
+				{{/if}}
 			</figure>
-			{{/if}}
 			<h1 class="header-name">{{name}} <em>{{ ../pagination.total}}</em></h1>
 			{{#if bio}}
 				<span class="header-description">{{bio}}</span>
@@ -44,9 +44,9 @@
 <div id="post-index" class="container">
 
 	<main class="content" role="main">
-	
+
 		{{> "loop"}}
-	
+
 	</main>
 
 </div>

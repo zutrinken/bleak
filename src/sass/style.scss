@@ -375,6 +375,40 @@ a {
 	}
 }
 
+.avatar {
+	position: relative;
+	overflow: hidden;
+	background: $color-gray-90;
+	margin: 0;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		z-index: 1;
+		width: 50%;
+		height: 50%;
+		bottom: 35%;
+		left: 25%;
+		border-radius: 100%;
+		background: $color-gray-85;
+	}
+
+	&:after {
+		width: 100%;
+		bottom: -25%;
+		left: 0;
+	}
+
+	img {
+		position: relative;
+		z-index: 2;
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
 
 /* ==========================================================================
    Default
@@ -966,7 +1000,6 @@ body {
 		overflow: hidden;
 		border-radius: 3em;
 		border: 2px solid $color-primary-default;
-		background: $color-primary-active;
 
 		img {
 			width: 100%;

@@ -15,14 +15,14 @@ module.exports = function(grunt) {
 				'bower_components/jquery/dist/jquery.min.js',
 				'bower_components/history.js/scripts/bundled/html4+html5/jquery.history.js',
 				'bower_components/imagesloaded/imagesloaded.pkgd.min.js',
-				'bower_components/masonry/dist/masonry.pkgd.min.js',
+				'bower_components/masonry-layout/dist/masonry.pkgd.min.js',
 				'bower_components/fitvids/jquery.fitvids.js',
 				'bower_components/highlightjs/highlight.pack.min.js',
 				'bower_components/nprogress/nprogress.js',
 				'bower_components/reading-time/build/readingTime.min.js'
 			],
 			'cssDependencies': [
-				'bower_components/normalize.css/normalize.css',
+				'bower_components/normalize-css/normalize.css',
 				'bower_components/highlightjs/styles/default.css',
 				'bower_components/nprogress/nprogress.css'
 			]
@@ -42,8 +42,8 @@ module.exports = function(grunt) {
 	                src: '*',
                     cwd: 'src/fonts/',
                     expand: true
-                }]		        
-	        } 
+                }]
+	        }
         },
         clean: {
             dist: ['assets']

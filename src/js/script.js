@@ -68,7 +68,7 @@ jQuery(function($) {
 	function grid() {
 		$('.post-list .post .post-image img').each(function() {
 			var img = $(this);
-			img.load(function() {
+			img.on('load', function() {
 				img.parents('.post-image').css({
 					'height' : '0',
 					'padding-bottom' : 100 / img.width() * img.height() + '%'

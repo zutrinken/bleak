@@ -42,11 +42,11 @@
 
 			{{#author}}
 			<aside class="post-author">
-				{{#if profile_image}}
-					<figure class="post-author-avatar">
+				<figure class="post-author-avatar avatar">
+					{{#if profile_image}}
 						<img src="{{profile_image}}" alt="{{name}}" />
-					</figure>
-				{{/if}}
+					{{/if}}
+				</figure>
 				<div class="post-author-bio">
 					<h4 class="post-author-name"><a href="{{url}}">{{name}}</a></h4>
 					<p class="post-author-meta">
