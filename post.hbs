@@ -10,7 +10,7 @@
 
 			<header class="post-header">
 				<span class="post-meta">
-					<span class="post-meta-author">{{author}}</span> | <span class="post-meta-date">{{date format="DD MMM YYYY"}}</span> | <span class="post-meta-reading-time">{{reading_time}}</span>
+					<span class="post-meta-author">{{authors}}</span> | <span class="post-meta-date">{{date format="DD MMM YYYY"}}</span> | <span class="post-meta-reading-time">{{reading_time}}</span>
 				</span>
 				<div class="clear"></div>
 				<h1 class="post-title">{{{title}}}</h1>
@@ -40,7 +40,7 @@
 
 			</footer>
 
-			{{#author}}
+			{{#primary_author}}
 			<aside class="post-author">
 				<figure class="post-author-avatar avatar">
 					{{#if profile_image}}
@@ -69,7 +69,7 @@
 				</div>
 				<div class="clear"></div>
 			</aside>
-			{{/author}}
+			{{/primary_author}}
 
             {{#if @labs.subscribers}}
             <aside class="post-subscribe">
