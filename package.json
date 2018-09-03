@@ -4,7 +4,7 @@
   "demo": "https://bleak.zutrinken.com",
   "version": "1.2.0",
   "engines": {
-    "ghost": ">=1.25.0"
+    "ghost": ">=2.1.0"
   },
   "license": "MIT",
   "screenshots": {
