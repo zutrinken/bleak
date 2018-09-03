@@ -1,10 +1,10 @@
 {
   "name": "bleak",
   "description": "Ghost Theme",
-  "demo": "http://bleak.zutrinken.com",
-  "version": "1.1.2",
+  "demo": "https://bleak.zutrinken.com",
+  "version": "1.2.0",
   "engines": {
-    "ghost": ">=1.17.0"
+    "ghost": ">=2.1.0"
   },
   "license": "MIT",
   "screenshots": {
@@ -24,7 +24,8 @@
   },
   "keywords": [
     "ghost",
-    "theme"
+    "theme",
+    "ghost-theme"
   ],
   "repository": {
     "type": "git",
