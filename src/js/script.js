@@ -190,8 +190,8 @@ jQuery(function($) {
 					link.addClass('js-archive-index');
 				}
 
-				if (link.attr('href') == window.location.origin) {
-					link.addClass('js-show-index');
+				if (link.attr('href') === window.location.origin || link.attr('href') === window.location.origin + "/" || link.attr('href') === "/") {
+					link.addClass('js-home-index');
 				}
 
 				if (link.attr('href').indexOf('tag') > -1) {
