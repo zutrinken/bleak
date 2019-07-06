@@ -41,25 +41,6 @@ jQuery(function($) {
 		}
 	});
 
-	/* ==========================================================================
-	   Current Menu Item
-	   ========================================================================== */
-
-	/*
-		Actually this should be handled by GHost itself, but the {{current}} handler doesn't
-		work as aspected everytime so I add this little FUnction to fix this on the client side.
-	*/
-
-	function currentMenuFix() {
-		$('.menu-list-item a').each(function() {
-			var link = $(this);
-			link.removeClass('current');
-			if(link.attr('href') == window.location.href) {
-				link.addClass('current');
-			}
-		});
-	}
-	currentMenuFix();
 
 	/* ==========================================================================
 	   Masonry
@@ -171,7 +152,6 @@ jQuery(function($) {
 		gallery();
 		video();
 		comments();
-		currentMenuFix();
 	}
 
 	/* ==========================================================================
