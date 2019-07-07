@@ -397,15 +397,17 @@ a {
 	  max-width: none !important;
 
 	  &.kg-width-wide {
-	    max-width: 80em !important;
+	    max-width: 64em !important;
 	    min-width: 100%;
 	    width: 75vw;
+			margin: 2vw 0 calc( 2em + 2vw);
 	  }
 
 	  &.kg-width-full {
-	    max-width: none;
-	    width: 100vw;
-	    margin-top: 2em;
+			max-width: 80em !important;
+	    min-width: 100%;
+	    width: 75vw;
+			margin: 2vw 0 calc( 2em + 2vw);
 	  }
 
 	  .kg-image {
@@ -428,8 +430,8 @@ a {
 	}
 
 	.kg-gallery-card {
-		margin: 0 0 2em;
-		max-width: 80em !important;
+		margin: 2vw 0 calc( 2em + 2vw);
+		max-width: 64em !important;
 		min-width: 100%;
 		width: 75vw;
 
@@ -568,7 +570,15 @@ body {
 .inner {
 	max-width: 48em;
 	margin: 0 auto;
-	padding: 0 1em;
+	padding: 0 4em;
+
+	@media only screen and (max-width: $breakpoint-tablet) {
+		padding: 0 2em;
+	}
+
+	@media only screen and (max-width: $breakpoint-phone) {
+		padding: 0 1em;
+	}
 }
 
 #wrapper {
@@ -580,20 +590,45 @@ body {
 	background: $color-gray-97;
 }
 
+.wrapper-o {
+	padding: 4em;
 
-.menu-initial {
+	@media only screen and (max-width: $breakpoint-desktop) {
+		padding: 2em;
+	}
 
-	#wrapper {
-
+	@media only screen and (max-width: $breakpoint-tablet) {
+		padding: 0;
 	}
 }
 
-.menu-active {
+.wrapper {
+	position: relative;
+	max-width: 80em;
+	margin: 0 auto 4em;
+	padding: 0;
+	transition: opacity ease-in 0.5s;
+	z-index: 10;
+}
 
-	#wrapper {
+.loading .wrapper {
+		opacity: 0;
+}
 
+.post-template .wrapper,
+.page-template .wrapper {
+	background: #fff;
+	padding-bottom: 8em;
+	border-radius: 2px;
+
+	@media only screen and (max-width: $breakpoint-tablet) {
+		border-top: 1px solid $color-gray-90;
+		border-bottom: 1px solid $color-gray-90;
+		border-radius: 0;
+		padding-bottom: 2em;
 	}
 }
+
 
 /* ==========================================================================
    Push Animations
@@ -702,24 +737,31 @@ body {
 	}
 
 	.nav-logo {
-		float: left;
 		max-width: 100%;
 		height: 4em;
 		padding: 1em;
 		padding-right: 5em;
 		box-sizing: border-box;
 
+		&:after {
+			clear: both;
+			content: '';
+			display: table;
+		}
+
 		img {
 			width: auto;
 			max-width: none;
 			height: 2em;
 			margin: 0;
+			margin-right: 1em;
+			float: left;
 		}
 
 		.name {
 			display: block;
 			line-height: 2em;
-			font-weight: 800;
+			font-weight: 700;
 			color: $color-gray-25;
 			overflow: hidden;
 			text-overflow: ellipsis;
@@ -764,12 +806,9 @@ body {
 	}
 }
 
-.loading {
-
-	#nav {
-		transform: translate3d(0,-100%,0);
-		opacity: 0;
-	}
+.loading #nav {
+	transform: translate3d(0,-100%,0);
+	opacity: 0;
 }
 
 #menu {
@@ -1016,7 +1055,7 @@ body {
 
 #header {
 	position: relative;
-	padding: 4em 0;
+	padding: calc( 4em + 4vw) 0 calc( 2em + 2vw );
 
 	.inner {
 		position: relative;
@@ -1033,7 +1072,7 @@ body {
 		letter-spacing: -1px;
 		display: block;
 		line-height: 1em;
-		font-size: 2em;
+		font-size: calc( 2em + 1vw);
 		text-decoration: none;
 		color: $color-gray-15;
 		padding: 0;
@@ -1048,7 +1087,7 @@ body {
 			width: auto;
 			min-width: 0.5em;
 			height: 1.5em;
-			padding: 0 0.5em;
+			padding: 0 0.667em;
 			line-height: 1.5em;
 			font-style: normal;
 			font-weight: 400;
@@ -1060,11 +1099,8 @@ body {
 		}
 	}
 
-	&.has-cover {
-
-		.header-name {
-			color: #fff;
-		}
+	&.has-cover .header-name {
+		color: #fff;
 	}
 
 	.header-description {
@@ -1073,6 +1109,8 @@ body {
 		color: $color-gray-65;
 		position: relative;
 		font-weight: 300;
+		font-size: calc( 1em + 0.5vw);
+		line-height: 1.25em;
 
 		&:after {
 			content: '';
@@ -1086,14 +1124,11 @@ body {
 		}
 	}
 
-	&.has-cover {
+	&.has-cover .header-description {
+		color: #fff;
 
-		.header-description {
-			color: #fff;
-
-			&:after {
-				background: #fff;
-			}
+		&:after {
+			background: #fff;
 		}
 	}
 
@@ -1112,21 +1147,18 @@ body {
 		}
 	}
 
-	&.has-cover {
-
-		.header-image {
-			border-color: #fff;
-		}
+	&.has-cover .header-image {
+		border-color: #fff;
 	}
 
 	.header-meta {
 		display: block;
-		margin: 1.334em auto -1.334em;
+		margin: 1.25em auto -1.25em;
 		color: $color-gray-65;
 		position: relative;
 		font-weight: 300;
-		font-size: 0.75em;
-		line-height: 1.334em;
+		font-size: 0.8em;
+		line-height: 1.25em;
 
 		span {
 			display: inline-block;
@@ -1154,18 +1186,15 @@ body {
 
 	}
 
-	&.has-cover {
+	&.has-cover .header-meta {
+		color: #fff;
 
-		.header-meta {
+		span {
 			color: #fff;
 
-			span {
+			i {
 				color: #fff;
-
-				i {
-					color: #fff;
-					opacity: 0.5;
-				}
+				opacity: 0.5;
 			}
 		}
 	}
@@ -1177,12 +1206,13 @@ body {
 		top: 0;
 		left: 0;
 		margin-top: -4em;
-		padding: 4em 0;
+		padding: 4em 0 8em;
 		background: no-repeat fixed center 100% / cover;
 		z-index: 1;
 
 		@media only screen and (max-width: $breakpoint-tablet) {
 			background-attachment: scroll;
+			padding: 4em 0;
 		}
 
 		&:before {
@@ -1192,7 +1222,8 @@ body {
 			height: 100%;
 			left: 0;
 			top: 0;
-			background: rgba(0,0,0,0.2);
+			background: $color-gray-15;
+			opacity: 0.2;
 		}
 
 		&:after {
@@ -1216,9 +1247,9 @@ body {
 	width: 100%;
 	left: 0;
 	bottom: 0;
-	font-size: 0.75em;
-	line-height: 1.334em;
-	background: $color-gray-15;
+	font-size: 1em;
+	line-height: 1em;
+	border-top: 1px solid $color-gray-90;
 	color: $color-gray-50;
 	z-index: 20;
 	transition: all ease-out 0.4s;
@@ -1227,7 +1258,7 @@ body {
 	opacity: 1;
 
 	a {
-		color: $color-gray-65;
+		color: $color-gray-40;
 		font-weight: 400;
 	}
 
@@ -1245,18 +1276,16 @@ body {
 		.credits-theme {
 			float: left;
 		}
+
 		.credits-software {
 			float: right;
 		}
 	}
 }
 
-.loading {
-
-	#footer {
-		transform: translate3d(0,100%,0);
-		opacity: 0;
-	}
+.loading #footer {
+	transform: translate3d(0,100%,0);
+	opacity: 0;
 }
 
 /* ==========================================================================
@@ -1282,6 +1311,7 @@ body {
 	}
 
 	.post-meta {
+		position: relative;
 		display: block;
 		font-size: 0.75em;
 		line-height: 1.334em;
@@ -1303,12 +1333,13 @@ body {
 	.post-title {
 		position: relative;
 		color: #000;
-		font-size: 2em;
+		font-size: calc( 2em + 2vw );
 		line-height: 1.375em;
 		font-weight: 800;
 		text-indent: -1px;
 		letter-spacing: -1px;
 		margin: 0.25em 0 0.75em;
+		hyphens: auto;
 
 		&:before {
 			content: '';
@@ -1328,31 +1359,63 @@ body {
 	}
 
 	.post-header {
-		padding: 4em 0 0;
-		margin-bottom: 3em;
+		padding: 8vw 0 2vw;
+
+		&.has-cover {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 2em;
+			padding: calc( 6em + 4vw) 0 calc( 8em + 2vw);
+			box-sizing: border-box;
+			background: no-repeat center center / cover $color-gray-15;
+			overflow: hidden;
+			color: #fff;
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: -5%;
+				bottom: -4em;
+				width: 110%;
+				height: 8em;
+				background: #fff;
+				border-top: 4px solid $color-primary-default;
+				box-shadow: 0 0 2em rgba(0,0,0,0.2);
+				transform: rotate(5deg);
+				transition: all ease-out 0.2s;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: $color-gray-15;
+				opacity: 0.2;
+			}
+
+			* {
+				color: inherit;
+
+				&:before {
+					display: none;
+				}
+			}
+
+			.inner {
+				width: 100%;
+				margin: auto;
+			}
+		}
 	}
 }
-
 
 /* ==========================================================================
    Index
    ========================================================================== */
-
-#post-index {
-	position: relative;
-	max-width: 1200px;
-	margin: 0 auto 4em;
-	padding: 0.5em;
-	transition: all ease-in 0.5s;
-	z-index: 10;
-}
-
-.loading {
-
-	#post-index {
-		opacity: 0;
-	}
-}
 
 @keyframes fade {
 	0% {
@@ -1367,10 +1430,17 @@ body {
 
 .post-list {
 	position: relative;
+	margin: 0 -0.5em;
+	box-sizing: border-box;
+
+	@media only screen and (max-width: $breakpoint-tablet) {
+		margin: 0 0.5em;
+	}
 
 	.post {
-		float: left;
-		width: 33.30%;
+		width: 33.333%;
+		padding: 0.5em;
+		box-sizing: border-box;
 
 		@media only screen and (max-width: $breakpoint-tablet) {
 			width: 49.90%;
@@ -1493,13 +1563,15 @@ body {
 
 		.inner {
 			padding: 2em;
-			margin: 0.5em;
+			margin: 0;
 			max-width: none;
 			background: #fff;
 			box-sizing: border-box;
 			transition: all ease-out 0.2s;
 			transform: scale(1);
 			transform-style: preserve-3d;
+			border-radius: 2px;
+			overflow: hidden;
 
 			@media only screen and (max-width: $breakpoint-tablet) {
 				padding: 1em;
@@ -1810,7 +1882,7 @@ body {
 	border: 1px solid $color-gray-90;
 	box-sizing: border-box;
 	border-radius: 2px;
-	background: radial-gradient(circle, $color-gray-90 10%, transparent 10%), radial-gradient(circle, $color-gray-90 10%, transparent 10%) 0.5em 0.5em;
+	background: radial-gradient(circle, $color-gray-85 10%, $color-gray-97 10%);
 	background-size: 1em 1em;
 	box-shadow: inset 0 0 0 0.75em $color-gray-97;
 
@@ -2005,7 +2077,7 @@ body {
 
 		.post-nav-teaser {
 			display: block;
-			padding: 1em;
+			padding: 1.5em;
 			transition: all ease-out 0.2s;
 			max-width: 25em;
 			overflow: visible;

@@ -1,25 +1,27 @@
 {{!< default}}
-	
+
 <header id="header" class="header{{#if @blog.cover_image}} has-cover{{/if}}">
 	<div class="inner">
-		<a class="header-title" href="{{@blog.url}}">
+		<span class="header-title">
 			<h1 class="header-name">{{@blog.title}}</h1>
 			{{#if @blog.description}}
 				<span class="header-description">{{@blog.description}}</span>
 			{{/if}}
-		</a>
+		</span>
 	</div>
 	{{#if @blog.cover_image}}
 	<div class="header-cover" style="background-image: url({{img_url @blog.cover_image}})"></div>
 	{{/if}}
 </header>
 
-<div id="post-index" class="container">
+<div class="wrapper-o">
+	<div id="post-index" class="wrapper">
 
-	<main class="content" role="main">
-	
-		{{> "loop"}}
-	
-	</main>
+		<main class="content" role="main">
 
+			{{> "loop"}}
+
+		</main>
+
+	</div>
 </div>

@@ -3,21 +3,28 @@
 {{#post}}
 
 <main class="content" role="main">
-	<div class="inner">
 
 	    <article class="{{post_class}}">
-			
-			<header class="post-header">
-				<h1 class="post-title">{{{title}}}</h1>
-			</header>
-		
-			<section class="post-content">
-				{{content}}
-			</section>
-	
-	        {{/post}}
-	
+
+				<div class="wrapper-o">
+					<div class="wrapper">
+
+						<header class="post-header">
+							<div class="inner">
+								<h1 class="post-title">{{{title}}}</h1>
+							</div>
+						</header>
+
+						<div class="inner">
+							<section class="post-content">
+								{{content}}
+							</section>
+						</div>
+
+				    {{/post}}
+					</div>
+				</div>
+
 	    </article>
-    </div>
 
 </main>
