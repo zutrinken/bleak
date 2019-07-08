@@ -37,7 +37,7 @@ You can make the navigation stick to the top by adding the following lines via c
 ```
 <style>
   #wrapper {
-		padding-top: 4em;
+    padding-top: 4em;
   }
   #nav {
     position: fixed;
