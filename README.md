@@ -25,18 +25,25 @@ An elegant AJAX driven theme for [Ghost](http://github.com/tryghost/ghost/) by [
 ## Features
 
 * Responsive layout
-* Blog navigation
-* Post navigation
-* Cover images for blog, tag and author archives
-* Featured posts style
 * Automatic code syntax highlight and line numbers
 * Disqus support
-* Subscribers support
-* Sharing buttons
 
 ## Setup
 
 To enable [Disqus](https://disqus.com/) comments go to your blogs code injection settings and add `<script>var disqus="YOUR_DISQUS_SHORTNAME";</script>` to your blog header.
+
+You can make the navigation stick to the top by adding the following lines via code injection:
+
+```
+<style>
+  #wrapper {
+		padding-top: 4em;
+  }
+  #nav {
+    position: fixed;
+  }
+</style>
+```
 
 ## Development
 
@@ -66,4 +73,4 @@ Distribute Grunt project:
 
 ## Copyright & License
 
-Copyright (C) 2015-2018 Peter Amende - Released under the [MIT License](https://github.com/zutrinken/bleak/blob/master/LICENSE).
+Copyright (C) 2015-2019 Peter Amende - Released under the [MIT License](https://github.com/zutrinken/bleak/blob/master/LICENSE).
