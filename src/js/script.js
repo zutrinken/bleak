@@ -223,7 +223,7 @@ jQuery(function($) {
 				ajaxContainer.fadeIn(500);
 				$(document).scrollTop(0);
 				setTimeout(function() {
-					html.removeClass('loading');
+					html.removeClass('loading').removeClass('post-loading');
 				}, 50);
 				reload();
 				loading = false;
@@ -249,21 +249,22 @@ jQuery(function($) {
 			html.removeClass('pushed-prev');
 		}
 
-	    if (loading === false) {
+    if (loading === false) {
 			var currentState = History.getState();
 			var url = $(this).prop('href');
 			var title = $(this).attr('title') || null;
 
-	        if (url.replace(/\/$/, "") !== currentState.url.replace(/\/$/, "")) {
+	    if (url.replace(/\/$/, "") !== currentState.url.replace(/\/$/, "")) {
 				loading = true;
 				html.addClass('loading');
 				NProgress.start();
 				History.pushState({}, title, url);
-	        }
 	    }
+   	}
 	});
 
 	$('body').on('click', '#post-index .post .js-ajax-link', function() {
+		html.addClass('post-loading');
 		var post = $(this).parents('.post');
 		post.addClass('initial');
 		setTimeout(function() {

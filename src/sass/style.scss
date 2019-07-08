@@ -398,16 +398,30 @@ a {
 
 	  &.kg-width-wide {
 	    max-width: 64em !important;
-	    min-width: 100%;
-	    width: 75vw;
+	    width: calc( 100vw - 16em );
 			margin: 2vw 0 calc( 2em + 2vw);
+
+			@media only screen and (max-width: $breakpoint-desktop) {
+				width: calc( 100vw - 8em );
+			}
+
+			@media only screen and (max-width: $breakpoint-tablet) {
+				width: calc( 100vw - 2em );
+			}
 	  }
 
 	  &.kg-width-full {
 			max-width: 80em !important;
-	    min-width: 100%;
-	    width: 75vw;
+	    width: calc( 100vw - 8em );
 			margin: 2vw 0 calc( 2em + 2vw);
+
+			@media only screen and (max-width: $breakpoint-desktop) {
+				width: calc( 100vw - 4em );
+			}
+
+			@media only screen and (max-width: $breakpoint-tablet) {
+				width: 100vw;
+			}
 	  }
 
 	  .kg-image {
@@ -629,6 +643,18 @@ body {
 	}
 }
 
+.post-template .wrapper {
+	transform: scale(1) translate3d(0,0,0);
+	transform-style: preserve-3d;
+	transform-origin: 50% top;
+	opacity: 1;
+	transition: all ease-out .5s;
+}
+
+.post-loading .post-template .wrapper {
+	transform: scale(0.9) translate3d(0,2em,0);
+	opacity: 0;
+}
 
 /* ==========================================================================
    Push Animations
@@ -1438,12 +1464,12 @@ body {
 	}
 
 	.post {
-		width: 33.333%;
+		width: 33.3%;
 		padding: 0.5em;
 		box-sizing: border-box;
 
 		@media only screen and (max-width: $breakpoint-tablet) {
-			width: 49.90%;
+			width: 49.9%;
 		}
 
 		@media only screen and (max-width: $breakpoint-phone) {
