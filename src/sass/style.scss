@@ -785,23 +785,42 @@ body {
 			display: table;
 		}
 
+		a {
+			display: flex;
+		}
+
 		img {
+			display: block;
 			width: auto;
 			max-width: none;
 			height: 2em;
 			margin: 0;
-			margin-right: 0.5em;
-			float: left;
+			margin-right: 1em;
 		}
 
 		.name {
 			display: block;
 			line-height: 2em;
-			font-weight: 700;
+			font-weight: 800;
 			color: $color-gray-25;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
+		}
+
+		.description {
+			display: block;
+			line-height: 2em;
+			font-weight: 300;
+			color: $color-gray-65;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			margin-left: 0.5em;
+
+			@media only screen and (max-width: $breakpoint-phone) {
+				display: none;
+			}
 		}
 	}
 

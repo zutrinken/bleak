@@ -25,6 +25,9 @@
 						<img src="{{@site.logo}}" alt="{{t "Logo" }}" />
 						{{/if}}
 						<span class="name">{{@site.title}}</span>
+						{{#if @site.description}}
+							<span class="description">{{@site.description}}</span>
+						{{/if}}
 					</a>
 				</div>
 				<div class="nav-menu">
