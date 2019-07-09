@@ -10,13 +10,13 @@
 		</li>
 		{{/foreach}}
 		<li class="menu-list-item menu-list-item-follow">
-			{{#if @blog.twitter}}
-			<a class="twitter" href="{{twitter_url}}" title="{{@blog.twitter}}"><i class="icon-twitter"></i></a>
+			{{#if @site.twitter}}
+			<a class="twitter" href="{{twitter_url}}" title="{{@site.twitter}}"><i class="icon-twitter"></i></a>
 			{{/if}}
-			{{#if @blog.facebook}}
-			<a class="facebook" href="{{facebook_url}}" title="{{@blog.facebook}}"><i class="icon-facebook"></i></a>
+			{{#if @site.facebook}}
+			<a class="facebook" href="{{facebook_url}}" title="{{@site.facebook}}"><i class="icon-facebook"></i></a>
 			{{/if}}
-			<a class="rss" href="{{@blog.url}}/rss/"><i class="icon-rss"></i></a>
+			<a class="rss" href="{{@site.url}}/rss/"><i class="icon-rss"></i></a>
 		</li>
 	</ul>
 </div>
