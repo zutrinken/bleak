@@ -2,9 +2,10 @@
   "name": "bleak",
   "description": "Ghost Theme",
   "demo": "https://bleak.zutrinken.com",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "engines": {
-    "ghost": ">=2.1.0"
+    "ghost": ">=2.1.0",
+    "ghost-api": "v2"
   },
   "license": "MIT",
   "screenshots": {
@@ -14,7 +15,7 @@
   "author": {
     "name": "Peter Amende",
     "email": "xoxo@zutrinken.com",
-    "url": "http://zutrinken.com"
+    "url": "https://zutrinken.com"
   },
   "gpm": {
     "type": "theme",
@@ -44,6 +45,6 @@
     "load-grunt-tasks": "^3.5.2"
   },
   "config": {
-    "posts_per_page": 5
+    "posts_per_page": 15
   }
 }
