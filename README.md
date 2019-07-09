@@ -1,13 +1,13 @@
 # Bleak
 
-An elegant AJAX driven theme for [Ghost](http://github.com/tryghost/ghost/) by [Peter Amende](http://zutrinken.com/).
+An elegant AJAX driven theme for [Ghost](https://github.com/tryghost/ghost/) by [Peter Amende](https://zutrinken.com/).
 
 ## Demo
 
-* [Blog](http://bleak.zutrinken.com)
-* [Post](http://bleak.zutrinken.com/demo)
-* [Tags](http://bleak.zutrinken.com/tag/general)
-* [Author](http://bleak.zutrinken.com/author/zutrinken)
+* [Blog](https://bleak.zutrinken.com)
+* [Post](https://bleak.zutrinken.com/demo)
+* [Tags](https://bleak.zutrinken.com/tag/general)
+* [Author](https://bleak.zutrinken.com/author/zutrinken)
 
 ## Screenshots
 
@@ -55,7 +55,7 @@ Install Grunt modules:
 
 	npm install
 
-Install [Bower](http://bower.io):
+Install [Bower](https://bower.io):
 
 	npm install -g bower
 
