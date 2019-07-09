@@ -444,10 +444,17 @@ a {
 	}
 
 	.kg-gallery-card {
-		margin: 2vw 0 calc( 2em + 2vw);
 		max-width: 64em !important;
-		min-width: 100%;
-		width: 75vw;
+		width: calc( 100vw - 16em );
+		margin: 2vw 0 calc( 2em + 2vw);
+
+		@media only screen and (max-width: $breakpoint-desktop) {
+			width: calc( 100vw - 8em );
+		}
+
+		@media only screen and (max-width: $breakpoint-tablet) {
+			width: calc( 100vw - 2em );
+		}
 
 		figcaption {
 			color: $color-gray-40;
