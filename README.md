@@ -2,7 +2,7 @@
 
 An elegant AJAX driven theme for [Ghost](https://github.com/tryghost/ghost/) by [Peter Amende](https://zutrinken.com/).
 
-Demo: [bleak.zutrinken.com](https://bleak.zutrinken.com/)
+Demo: [bleak.peteramende.de](https://bleak.peteramende.de/)
 
 ## Screenshots
 
