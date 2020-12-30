@@ -1,8 +1,8 @@
 # Bleak
 
-An elegant AJAX driven theme for [Ghost](https://github.com/tryghost/ghost/) by [Peter Amende](https://zutrinken.com/).
+An elegant AJAX driven theme for [Ghost](https://github.com/tryghost/ghost/). See a demo at: [bleak.peteramende.de](https://bleak.peteramende.de/)
 
-Demo: [bleak.peteramende.de](https://bleak.peteramende.de/)
+If you like this theme, you can buy me a ~~coffee~~ [beer](https://paypal.me/zutrinken).
 
 ## Screenshots
 
