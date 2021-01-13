@@ -1,7 +1,7 @@
 {
   "name": "bleak",
   "description": "Ghost Theme",
-  "demo": "https://bleak.zutrinken.com",
+  "demo": "https://bleak.peteramende.de",
   "version": "1.5.0",
   "engines": {
     "ghost": ">=2.1.0",
