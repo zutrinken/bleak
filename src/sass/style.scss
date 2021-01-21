@@ -9,8 +9,14 @@ $breakpoint-phone:		30em;
 $breakpoint-tablet:		50em;
 $breakpoint-desktop:	70em;
 
-$color-green-85: #36D995;
-$color-green-72: #2DB77E;
+
+:root {
+  --color-primary: #36D995;
+  --color-primary-active: #2DB77E;
+}
+
+$color-primary-default:		var(--color-primary); /* Light */
+$color-primary-active:		var(--color-primary-active); /* Dark */
 
 $color-yellow-100:	#FFC336;
 
@@ -22,14 +28,6 @@ $color-gray-50: #737580;
 $color-gray-40: #595B66;
 $color-gray-25: #363740;
 $color-gray-15: #1F2026;
-
-/*
-	Change the accent colors here. Make sure they work on light an dark
-	backgrounds or as background color for light and dark text color
-*/
-
-$color-primary-default:		$color-green-85; /* Light */
-$color-primary-active:		$color-green-72; /* Dark */
 
 
 /* ==========================================================================
@@ -2109,7 +2107,7 @@ body {
 	margin: 2em 0 -4em;
 	text-align: center;
 	box-sizing: border-box;
-	border-top: 2px solid $color-green-85;
+	border-top: 2px solid $color-primary-default;
 	background: radial-gradient(circle, $color-gray-40 10%, $color-gray-25 10%);
 	background-size: 1em 1em;
 	box-shadow: inset 0 0 0 1em $color-gray-25;

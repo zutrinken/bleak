@@ -17,15 +17,35 @@ If you like this theme, you can buy me a ~~coffee~~ [beer](https://paypal.me/zut
 </tr>
 </table>
 
-## Features
+## ⭐️Features
 
 * Responsive layout
 * Automatic code syntax highlight and line numbers
 * Disqus support
 
-## Setup
+## 🎨 Setup custom color
 
-To enable [Disqus](https://disqus.com/) comments go to your blogs code injection settings and add `<script>var disqus="YOUR_DISQUS_SHORTNAME";</script>` to your blog header.
+1. Go to __Code injection__.  
+2. Add this to __Blog Header__:  
+````
+<style>
+  :root {
+    --color-primary: #D95736;
+    --color-primary-active: #BF4526;
+  }
+</style>
+````
+
+## 💬 Setup [Disqus](https://disqus.com/)
+
+
+1. Go to __Code injection__.  
+2. Add this to __Blog Header__:  
+````
+<script>var disqus = 'YOUR_DISQUS_SHORTNAME';</script>
+````
+
+## Sticky Header
 
 You can make the navigation stick to the top by adding the following lines via code injection:
 
