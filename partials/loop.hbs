@@ -7,7 +7,17 @@
 			<article class="{{post_class}}">
 				<div class="inner">
 					<a class="post-link" href="{{url absolute="true"}}"></a>
-
+					{{#if feature_image}}
+					<figure class="post-image">
+						<a href="{{url absolute="true"}}">
+							<img
+							srcset="{{img_url feature_image size="s"}} 320w,
+											{{img_url feature_image size="m"}} 640w"
+							src="{{img_url feature_image size="m"}}"
+							alt="{{title}}" />
+						</a>
+					</figure>
+					{{/if}}
 					<span class="post-meta">
 						<span class="post-date">{{date format="DD MMM YYYY"}}</span>
 					</span>
