@@ -1566,7 +1566,7 @@ body {
 			margin-bottom: 2em;
 			padding: calc( 6em + 4vw) 0 calc( 8em + 2vw);
 			box-sizing: border-box;
-			background: no-repeat center center / cover $color-gray-15;
+			background: $color-gray-15;
 			overflow: hidden;
 			color: #fff;
 
@@ -1582,6 +1582,7 @@ body {
 				box-shadow: 0 0 2em rgba(0,0,0,0.2);
 				transform: rotate(5deg);
 				transition: all ease-out 0.2s;
+				z-index: 20;
 			}
 
 			&:before {
@@ -1593,6 +1594,7 @@ body {
 				height: 100%;
 				background: $color-gray-15;
 				opacity: 0.2;
+				z-index: 10;
 			}
 
 			* {
@@ -1606,6 +1608,23 @@ body {
 			.inner {
 				width: 100%;
 				margin: auto;
+				z-index: 15;
+			}
+
+			.post-cover {
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 5;
+
+				img {
+					display: block;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+  				object-position: 50% 50%;
+				}
 			}
 		}
 	}

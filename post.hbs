@@ -11,7 +11,7 @@
 				<div class="wrapper-o">
 					<div class="wrapper">
 
-						<header class="post-header{{#if feature_image}} has-cover{{/if}}" {{#if feature_image}}style="background-image: url({{img_url feature_image}});"{{/if}}>
+						<header class="post-header{{#if feature_image}} has-cover{{/if}}">
 							<div class="inner">
 								<span class="post-meta">
 									<span class="post-meta-author">{{authors}}</span> | <span class="post-meta-date">{{date format="DD MMM YYYY"}}</span> | <span class="post-meta-reading-time">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
@@ -19,6 +19,17 @@
 								<div class="clear"></div>
 								<h1 class="post-title">{{{title}}}</h1>
 							</div>
+							{{#if feature_image}}
+							<div class="post-cover">
+								<img
+								srcset="{{img_url feature_image size="s"}} 320w,
+					              {{img_url feature_image size="m"}} 640w,
+					              {{img_url feature_image size="l"}} 960w,
+					              {{img_url feature_image size="xl"}} 1920w"
+					      src="{{img_url feature_image size="xl"}}"
+								alt="{{title}}" />
+							</div>
+							{{/if}}
 						</header>
 
 						<div class="inner">
