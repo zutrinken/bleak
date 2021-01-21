@@ -68,4 +68,4 @@ Distribute Grunt project:
 
 ## Copyright & License
 
-Copyright (C) 2015-2019 Peter Amende - Released under the [MIT License](https://github.com/zutrinken/bleak/blob/master/LICENSE).
+Copyright (C) 2015-2021 Peter Amende - Released under the [MIT License](https://github.com/zutrinken/bleak/blob/master/LICENSE).

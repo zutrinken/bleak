@@ -707,6 +707,10 @@ body {
 	min-height: 100vh;
 	padding-bottom: 6em;
 	background: $color-gray-97;
+
+	@media only screen and (max-width: $breakpoint-phone) {
+		padding-bottom: 8.66666em;
+	}
 }
 
 .wrapper-o {
@@ -1143,19 +1147,36 @@ body {
 				}
 			}
 
-			&.menu-list-item-follow {
+			&.menu-list-item-members {
 				display: flex;
-				padding: 1em 0;
+				padding: 1em;
 				justify-content: space-around;
 				align-content: stretch;
 
-				a {
+				button {
+					display: block;
+					margin: 0.5em;
+					padding: 1em;
 					flex: 1;
-					text-align: center;
+					border: 0;
+					color: $color-gray-25;
+					background: $color-gray-90;
+					font-weight: 700;
+					cursor: pointer;
 
 					&:hover,
 					&:focus {
-						background: none;
+						background: $color-gray-85;
+					}
+
+					&.cta {
+						color: #fff;
+						background: $color-primary-default;
+
+						&:hover,
+						&:focus {
+							background: $color-primary-active;
+						}
 					}
 				}
 			}
@@ -1416,22 +1437,46 @@ body {
 	}
 
 	.credits {
+		display: flex;
+		justify-content: space-between;
 		text-align: center;
 		font-size: 0.75em;
 		line-height: 1.33333em;
 		padding: 2.66666em;
-		overflow: auto;
+
+		@media only screen and (max-width: $breakpoint-phone) {
+			flex-direction: column;
+		}
 
 		span {
 			display: block;
 		}
 
 		.credits-theme {
-			float: left;
+
+			@media only screen and (max-width: $breakpoint-phone) {
+				order: 2;
+				margin-bottom: 0.66666em;
+			}
+		}
+
+		.credits-links {
+
+			@media only screen and (max-width: $breakpoint-phone) {
+				order: 1;
+				margin-bottom: 1.33333em;
+			}
+
+			a {
+				margin: 0 0.66666em;
+			}
 		}
 
 		.credits-software {
-			float: right;
+
+			@media only screen and (max-width: $breakpoint-phone) {
+				order: 3;
+			}
 		}
 	}
 }

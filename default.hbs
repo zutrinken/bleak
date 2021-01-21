@@ -41,6 +41,15 @@
 			<footer id="footer">
 				<section class="credits">
 					<span class="credits-theme">{{t "Theme" }} <a href="https://github.com/zutrinken/bleak" target="_blank" rel="nofollow">Bleak</a> {{t "by"}} <a href="https://github.com/zutrinken" target="_blank" rel="nofollow">zutrinken</a></span>
+					<span class="credits-links">
+						{{#if @site.twitter}}
+						<a class="twitter" href="{{twitter_url}}" title="{{@site.twitter}}"><i class="icon-twitter"></i></a>
+						{{/if}}
+						{{#if @site.facebook}}
+						<a class="facebook" href="{{facebook_url}}" title="{{@site.facebook}}"><i class="icon-facebook"></i></a>
+						{{/if}}
+						<a class="rss" href="{{@site.url}}/rss/"><i class="icon-rss"></i></a>
+					</span>
 					<span class="credits-software">{{t "Published with"}} <a href="http://ghost.org" target="_blank" rel="nofollow">Ghost</a></span>
 				</section>
 			</footer>

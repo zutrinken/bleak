@@ -9,15 +9,26 @@
 			<a class="{{slug}}{{#if current}} current{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
 		</li>
 		{{/foreach}}
-		<li class="menu-list-item menu-list-item-follow">
-			{{#if @site.twitter}}
-			<a class="twitter" href="{{twitter_url}}" title="{{@site.twitter}}"><i class="icon-twitter"></i></a>
-			{{/if}}
-			{{#if @site.facebook}}
-			<a class="facebook" href="{{facebook_url}}" title="{{@site.facebook}}"><i class="icon-facebook"></i></a>
-			{{/if}}
-			<a class="rss" href="{{@site.url}}/rss/"><i class="icon-rss"></i></a>
-		</li>
+		{{#if @labs.members}}
+			<li class="menu-list-item menu-list-item-members">
+				{{#if @member}}
+
+						<button class="members-account" data-portal="account">{{t "Account"}}</button>
+
+					{{#unless @member.paid}}
+
+							<button class="members-upgrade cta" data-portal="account/plans">{{t "Upgrade"}}</button>
+
+					{{/unless}}
+				{{else}}
+
+						<button class="members-login" data-portal="signin">{{t "Sign in"}}</button>
+
+						<button class="members-subscribe cta" data-portal="signup">{{t "Sign up"}}</button>
+
+				{{/if}}
+			</li>
+		{{/if}}
 	</ul>
 </div>
 <div class="overlay"></div>
