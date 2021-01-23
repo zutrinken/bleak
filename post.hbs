@@ -55,6 +55,13 @@
 
 							</footer>
 
+							<aside class="post-comments">
+								<div id="disqus_thread"></div>
+							</aside>
+						</div>
+
+						<aside class="post-author">
+							<div class="inner">
 							{{#has author="count:>1"}}
 								<aside class="post-authors">
 									<p class="post-authors-info">{{t "This post was a collaboration between:"}}</p>
@@ -62,50 +69,37 @@
 								</aside>
 							{{else}}
 								{{#primary_author}}
-									<aside class="post-author">
-										<figure class="post-author-avatar avatar">
-											{{#if profile_image}}
-												<img src="{{profile_image}}" alt="{{name}}" />
-											{{/if}}
-										</figure>
-										<div class="post-author-bio">
-											<h4 class="post-author-name"><a href="{{url}}">{{name}}</a></h4>
-											<p class="post-author-meta">
-												{{#if location}}
-												<span class="post-author-meta-location"><i class="icon-location"></i> {{location}}</span>
+										<aside class="post-author-card">
+											<figure class="post-author-avatar avatar">
+												{{#if profile_image}}
+													<img src="{{profile_image}}" alt="{{name}}" />
 												{{/if}}
-												{{#if website}}
-												<span class="post-author-meta-website"><i class="icon-link"></i> <a href="{{website}}">{{t "Website"}}</a></span>
+											</figure>
+											<div class="post-author-bio">
+												<h4 class="post-author-name"><a href="{{url}}">{{name}}</a></h4>
+												{{#if bio}}
+													<p class="post-author-about">{{{bio}}}</p>
 												{{/if}}
-												{{#if twitter}}
-												<span class="post-author-meta-twitter"><i class="icon-twitter"></i> <a target="_blank" href="https://twitter.com/{{twitter}}">Twitter</a></span>
-												{{/if}}
-												{{#if facebook}}
-												<span class="post-author-meta-facebook"><i class="icon-facebook"></i> <a target="_blank" href="https://facebook.com/{{facebook}}">Facebook</a></span>
-												{{/if}}
-											</p>
-											{{#if bio}}
-												<p class="post-author-about">{{{bio}}}</p>
-											{{/if}}
-										</div>
-										<div class="clear"></div>
-									</aside>
+												<span class="post-author-meta">
+													{{#if location}}
+													<span class="post-author-meta-location"><i class="icon-location"></i> {{location}}</span>
+													{{/if}}
+													{{#if website}}
+													<span class="post-author-meta-website"><a target="_blank" href="{{website}}" title="{{t "Website"}}"><i class="icon-link"></i> {{website}}</a></span>
+													{{/if}}
+													{{#if twitter}}
+													<span class="post-author-meta-twitter"><a target="_blank" href="https://twitter.com/{{twitter}}" title="{{t "Twitter"}}"><i class="icon-twitter"></i></a></span>
+													{{/if}}
+													{{#if facebook}}
+													<span class="post-author-meta-facebook"><a target="_blank" href="https://facebook.com/{{facebook}}" title="{{t "Facebook"}}"><i class="icon-facebook"></i></a></span>
+													{{/if}}
+												</span>
+											</div>
+										</aside>
 								{{/primary_author}}
 							{{/has}}
-
-							<aside class="post-comments">
-								<div id="disqus_thread"></div>
-							</aside>
-
-						</div>
-
-						{{#if @labs.subscribers}}
-						<aside class="post-subscribe">
-							<p>{{t "Get the latest posts delivered right to your inbox."}}</p>
-								{{subscribe_form placeholder=(t "Your email address") form_class="post-subscribe-form" input_class="post-subscribe-input" button_class="post-subscribe-button"}}
+							</div>
 						</aside>
-						{{/if}}
-
 					</div>
 				</div>
 			</div>

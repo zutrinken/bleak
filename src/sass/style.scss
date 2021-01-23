@@ -1976,41 +1976,47 @@ body {
    Post Author
    ========================================================================== */
 
+.post-author {
+    margin-top: 4em;
+    padding-top: 4em;
+  	border-top: 1px solid $color-gray-90;
+
+    @media only screen and (max-width: $breakpoint-phone) {
+  		padding-bottom: 2em;
+  	}
+}
+
 .post-authors {
 	text-align: center;
-	margin: 4em 0;
-	padding-top: 2em;
-	border-top: 1px solid $color-gray-90;
 
 	.post-authors-info {}
 	.post-authors-authors {}
 }
 
 
-.post-author {
-	clear: both;
-	margin: 4em 0;
-	padding: 2.5em;
-	background: #fff;
+.post-author-card {
+	display: flex;
 
 	@media only screen and (max-width: $breakpoint-phone) {
-		padding: 1em;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1em;
+    padding-right: 1em;
 	}
 
 	.post-author-avatar {
+    flex-shrink: 0;
 		display: block;
-		float: left;
 		width: 6em;
 		height: 6em;
-		margin: 0;
+		margin: 0 2em 0 0;
 		border-radius: 12em;
 		overflow: hidden;
 
 		@media only screen and (max-width: $breakpoint-phone) {
-			float: none;
 			width: 4em;
 			height: 4em;
-			margin-bottom: 1em;
+			margin: 0 auto 1em;
 		}
 
 		img {
@@ -2022,48 +2028,49 @@ body {
 	}
 
 	.post-author-bio {
-		padding-left: 8em;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
 
-		@media only screen and (max-width: $breakpoint-phone) {
-			padding-left: 0;
+    @media only screen and (max-width: $breakpoint-phone) {
+      text-align: center;
 		}
 
 		.post-author-name {
 			font-size: 1.25em;
 			line-height: 1.2em;
 			margin-top: 0;
-			margin-bottom: 0;
+			margin-bottom: 0.75rem;
 			font-weight: 800;
 			color: $color-gray-25;
 		}
 
 		.post-author-about {
-			font-size: 0.75em;
-			line-height: 1.66666em;
-			margin: 0;
-			padding-top: 1em;
-			border-top: 1px solid $color-gray-90;
+			margin-top: 0;
+      margin-bottom: 0.75rem;
 		}
 
 		.post-author-meta {
-			margin-top: 0.571em;
-			margin-bottom: 0;
+      display: flex;
+      flex-wrap: wrap;
+
+      @media only screen and (max-width: $breakpoint-phone) {
+        justify-content: center;
+  		}
 
 			span {
-				display: inline-block;
+				display: block;
 				font-size: 0.875em;
 				line-height: 1.143em;
-				margin-right: 1.143em;
-				margin-bottom: 1.143em;
+				margin-right: 1rem;
+				margin-bottom: 1rem;
 				color: $color-gray-50;
-
-				i {
-					color: $color-gray-65;
-				}
+        white-space: nowrap;
 			}
 
 			.post-author-meta-location {
-
+        font-style: italic;
 			}
 
 			.post-author-meta-website {
@@ -2094,118 +2101,6 @@ body {
 
 	@media only screen and (max-width: $breakpoint-phone) {
 		padding: 0.5em;
-	}
-}
-
-/* ==========================================================================
-   Post Subscribe
-   ========================================================================== */
-
-.post-subscribe {
-	position: relative;
-	padding: 3em 1em 4em;
-	margin: 2em 0 -4em;
-	text-align: center;
-	box-sizing: border-box;
-	border-top: 2px solid $color-primary-default;
-	background: radial-gradient(circle, $color-gray-40 10%, $color-gray-25 10%);
-	background-size: 1em 1em;
-	box-shadow: inset 0 0 0 1em $color-gray-25;
-
-	@media only screen and (max-width: $breakpoint-tablet) {
-		margin-bottom: -2em;
-	}
-
-	@media only screen and (max-width: $breakpoint-phone) {
-		padding: 2em 0.5em 1em;
-	}
-
-	p {
-		display: inline-block;
-		font-size: 0.75em;
-		line-height: 1.33333em;
-		letter-spacing: 0.2px;
-		font-weight: 400;
-		margin: 0 3.33333em 3.33333em;
-		padding: 0 0.66666em;
-		background: $color-gray-25;
-		box-shadow: 0 0 0 0.5em $color-gray-25;
-		border-radius: 4px;
-		color: $color-gray-65;
-	}
-
-	.post-subscribe-form {
-		position: relative;
-		display: block;
-		max-width: 32em;
-		margin: 0 auto;
-		box-sizing: border-box;
-
-		@media only screen and (max-width: $breakpoint-phone) {
-			margin: 1em;
-		}
-
-		.post-subscribe-input {
-			width: 100%;
-			height: 3.5em;
-			padding: 0.25em 1em;
-			border: 1px solid $color-gray-90;
-			background: #fff;
-			appearance: none;
-			outline: none;
-			box-shadow: none;
-			box-sizing: border-box;
-			border-radius: 4px;
-			transition: all ease-out 0.2s;
-			box-shadow: 0 0 0 1em $color-gray-25;
-
-			@media only screen and (max-width: $breakpoint-phone) {
-				height: 3em;
-				border-radius: 2px;
-			}
-
-			&:hover {
-				border-color: $color-gray-85;
-			}
-
-			&:focus {
-				border-color: $color-primary-default;
-			}
-		}
-
-		.post-subscribe-button {
-			position: absolute;
-			top: 0;
-			right: 0;
-			margin: 0.25em;
-			display: inline-block;
-			height: 3em;
-			padding: 0 1em;
-			font-weight: 500;
-			color: #fff;
-			font-weight: 400;
-			background: $color-primary-default;
-			border: 0;
-			appearance: none;
-			outline: none;
-			box-shadow: none;
-			box-sizing: border-box;
-			border-radius: 2px;
-			transition: all ease-out 0.2s;
-			cursor: pointer;
-
-			@media only screen and (max-width: $breakpoint-phone) {
-				position: relative;
-				width: 100%;
-				margin: 0.5em 0 0;
-			}
-
-
-			&:hover,
-			&:focus {
-				background: $color-primary-active;
-			}
-		}
 	}
 }
 
