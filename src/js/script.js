@@ -76,10 +76,13 @@ jQuery(function($) {
 		$('pre code').each(function(i, e) {
 			hljs.highlightBlock(e);
 			var code = $(this);
-			var lines = code.html().split(/\n/).length;
+			var lines = code.html().split(/\n(?!$)/g).length;
 			var numbers = [];
+			if (lines > 1) {
+        lines++;
+      }
 			for (i = 1; i < lines; i++) {
-				numbers += '<span class="line">' + i + '</span>';
+				numbers += '<span class="line" aria-hidden="true">' + i + '</span>';
 			}
 			code.parent().addClass('codeblock').append('<div class="lines">' + numbers + '</div>');
 		});
