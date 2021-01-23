@@ -266,7 +266,7 @@ jQuery(function($) {
    	}
 	});
 
-	$('body').on('click', '#post-index .post .js-ajax-link', function() {
+	$('body').on('click', '.js-ajax-link:not(.post-nav-item)', function() {
 		html.addClass('post-loading');
 		var post = $(this).parents('.post');
 		post.addClass('initial');

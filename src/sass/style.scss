@@ -742,6 +742,11 @@ body {
 	padding-bottom: 4em;
 	border-radius: 2px;
 	overflow: hidden;
+  transform: scale(1) translate3d(0,0,0);
+	transform-style: preserve-3d;
+	transform-origin: 50% top;
+	opacity: 1;
+	transition: all ease-out .5s;
 
 	@media only screen and (max-width: $breakpoint-tablet) {
 		border-top: 1px solid $color-gray-90;
@@ -751,15 +756,8 @@ body {
 	}
 }
 
-.post-template .wrapper {
-	transform: scale(1) translate3d(0,0,0);
-	transform-style: preserve-3d;
-	transform-origin: 50% top;
-	opacity: 1;
-	transition: all ease-out .5s;
-}
-
-.post-loading .post-template .wrapper {
+.post-loading .post-template .wrapper,
+.post-loading .page-template .wrapper {
 	transform: scale(0.9) translate3d(0,2em,0);
 	opacity: 0;
 }
@@ -859,6 +857,8 @@ body {
 	position: relative;
 	width: 100%;
 	top: 0;
+  display: flex;
+  justify-content: space-between;
 	background: #fff;
 	z-index: 70;
 	transition: all ease-out 0.4s;
@@ -866,24 +866,11 @@ body {
 	transform-style: preserve-3d;
 	opacity: 1;
 
-	&:after {
-		clear: both;
-		content: '';
-		display: table;
-	}
-
 	.nav-logo {
 		max-width: 100%;
 		height: 4em;
 		padding: 1em;
-		padding-right: 5em;
 		box-sizing: border-box;
-
-		&:after {
-			clear: both;
-			content: '';
-			display: table;
-		}
 
 		a {
 			display: inline-flex;
@@ -925,18 +912,36 @@ body {
 	}
 
 	.nav-menu {
-		position: absolute;
-		right: 0;
-		top: 0;
+    display: flex;
 
-		&:after {
-			clear: both;
-			content: '';
-			display: table;
-		}
+    .menu-list {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      line-height: 2em;
 
-		a {
-			display: block;
+      @media only screen and (max-width: $breakpoint-tablet) {
+				display: none;
+			}
+
+      .menu-list-item {
+        padding: 1em;
+
+        a {
+          display: block;
+          white-space: nowrap;
+
+          &.current {
+  					font-weight: 700;
+  					color: $color-gray-25;
+  				}
+        }
+      }
+    }
+
+		.nav-menu-open {
+			display: none;
 			width: 1em;
 			height: 1em;
 			line-height: 1em;
@@ -944,6 +949,10 @@ body {
 			text-align: center;
 			float: left;
 			cursor: pointer;
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+				display: block;
+			}
 
 			&:hover,
 			&:focus {
@@ -954,10 +963,6 @@ body {
 				margin: auto;
 			}
 		}
-
-		.rss {}
-
-		.menu {}
 	}
 }
 
@@ -976,7 +981,7 @@ body {
 	margin-left: -15em;
 	background: transparent;
 	box-sizing: border-box;
-	padding: 3em 0 0;
+	padding: 3em 0 5em;
 	overflow: hidden;
 	transition: all ease-out 0.3s;
 	transform: translate3d(0,2em,0);
@@ -1144,43 +1149,51 @@ body {
 					}
 				}
 			}
-
-			&.menu-list-item-members {
-				display: flex;
-				padding: 1em;
-				justify-content: space-around;
-				align-content: stretch;
-
-				button {
-					display: block;
-					margin: 0.5em;
-					padding: 1em;
-					flex: 1;
-					border: 0;
-					color: $color-gray-25;
-					background: $color-gray-90;
-					border-radius: 2px;
-					font-weight: 700;
-					cursor: pointer;
-
-					&:hover,
-					&:focus {
-						background: $color-gray-85;
-					}
-
-					&.cta {
-						color: #fff;
-						background: $color-primary-default;
-
-						&:hover,
-						&:focus {
-							background: $color-primary-active;
-						}
-					}
-				}
-			}
 		}
 	}
+
+  .menu-members {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+    justify-content: space-around;
+    align-content: stretch;
+    z-index: 105;
+    background: #fff;
+    border-top: 1px solid $color-gray-90;
+
+    button {
+      display: block;
+      margin: 0.5em;
+      padding: 1em;
+      flex: 1;
+      border: 0;
+      color: $color-gray-25;
+      background: $color-gray-90;
+      border-radius: 2px;
+      font-weight: 700;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        background: $color-gray-85;
+      }
+
+      &.cta {
+        color: #fff;
+        background: $color-primary-default;
+
+        &:hover,
+        &:focus {
+          background: $color-primary-active;
+        }
+      }
+    }
+  }
 }
 
 .overlay {

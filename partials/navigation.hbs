@@ -1,34 +1,7 @@
-<div id="menu" data-target="menu">
-	<div class="menu-header">
-		<span class="menu-label">{{t "Menu"}}</span>
-		<a class="menu-close" data-action="menu" data-target="menu"></a>
-	</div>
-	<ul class="menu-list">
-		{{#foreach navigation}}
-		<li class="menu-list-item">
-			<a class="{{slug}}{{#if current}} current{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
-		</li>
-		{{/foreach}}
-		{{#if @labs.members}}
-			<li class="menu-list-item menu-list-item-members">
-				{{#if @member}}
-
-						<button class="members-account" data-portal="account">{{t "Account"}}</button>
-
-					{{#unless @member.paid}}
-
-							<button class="members-upgrade cta" data-portal="account/plans">{{t "Upgrade"}}</button>
-
-					{{/unless}}
-				{{else}}
-
-						<button class="members-login" data-portal="signin">{{t "Sign in"}}</button>
-
-						<button class="members-subscribe cta" data-portal="signup">{{t "Sign up"}}</button>
-
-				{{/if}}
-			</li>
-		{{/if}}
-	</ul>
-</div>
-<div class="overlay"></div>
+<ul class="menu-list">
+	{{#foreach navigation}}
+	<li class="menu-list-item">
+		<a class="{{slug}}{{#if current}} current{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
+	</li>
+	{{/foreach}}
+</ul>
