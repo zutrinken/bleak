@@ -4,7 +4,7 @@
 		<a class="menu-close" data-action="menu" data-target="menu"></a>
 	</div>
 	{{navigation}}
-	{{#if @labs.members}}
+	{{#if @site.members_enabled}}
 		<div class="menu-members">
 			{{#if @member}}
 					<button class="members-account" data-portal="account">{{t "Account"}}</button>
